@@ -13,9 +13,8 @@ export function Navbar({ onBookConsultation }) {
   const navItems = [
     { name: 'Services', href: '#services', id: 'services' },
     { name: 'How We Work', href: '#how-we-work', id: 'how-we-work' },
-    { name: 'Live Demo', href: '#demo', id: 'demo' },
-    { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Why Us', href: '#why-us', id: 'why-us' },
+    { name: 'Tech Stack', href: '#tech-stack', id: 'tech-stack' },
+    { name: 'Testimonials', href: '#testimonials', id: 'testimonials' },
     { name: 'FAQ', href: '#faq', id: 'faq' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
@@ -36,7 +35,7 @@ export function Navbar({ onBookConsultation }) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'py-3.5 bg-[#07070E]/85 dark:bg-[#07070E]/85 light:bg-white/90 backdrop-blur-xl border-b border-white/10 dark:border-white/10 light:border-slate-200/80 shadow-[0_4px_30px_rgba(0,0,0,0.3)]'
+          ? 'py-3.5 bg-[#07070E]/90 dark:bg-[#07070E]/90 light:bg-white/90 backdrop-blur-xl border-b border-white/10 dark:border-white/10 light:border-slate-200/80 shadow-[0_4px_30px_rgba(0,0,0,0.3)]'
           : 'py-5 bg-transparent'
       }`}
     >
@@ -57,14 +56,14 @@ export function Navbar({ onBookConsultation }) {
                   href={item.href}
                   className={`relative px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200 ${
                     isActive
-                      ? 'text-cyan-300 dark:text-cyan-300 light:text-violet-700'
+                      ? 'text-brand-secondary dark:text-brand-secondary light:text-brand-primary'
                       : 'text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-950'
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="nav-pill"
-                      className="absolute inset-0 bg-gradient-to-r from-violet-600/30 to-cyan-500/30 dark:from-violet-600/30 dark:to-cyan-500/30 light:from-violet-200 light:to-cyan-200 border border-cyan-400/30 rounded-full -z-10 shadow-[0_0_12px_rgba(6,182,212,0.3)]"
+                      className="absolute inset-0 bg-brand-primary/20 dark:bg-brand-primary/20 light:bg-brand-primary/10 border border-brand-secondary/40 rounded-full -z-10 shadow-brand-secondary"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -97,7 +96,7 @@ export function Navbar({ onBookConsultation }) {
               className="p-2 rounded-xl border border-slate-700/60 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 dark:text-slate-300 light:text-slate-700 focus:outline-none"
               aria-label="Toggle navigation menu"
             >
-              {isOpen ? <X className="w-5 h-5 text-cyan-400" /> : <Menu className="w-5 h-5" />}
+              {isOpen ? <X className="w-5 h-5 text-brand-secondary" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -121,7 +120,7 @@ export function Navbar({ onBookConsultation }) {
                   onClick={closeMenu}
                   className={`block px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide transition-colors ${
                     activeId === item.id
-                      ? 'bg-violet-600/20 text-cyan-300 border border-violet-500/30'
+                      ? 'bg-brand-primary/20 text-brand-secondary border border-brand-primary/30'
                       : 'text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-slate-100'
                   }`}
                 >

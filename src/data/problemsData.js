@@ -17,7 +17,7 @@ export const problemsData = [
       "Staff refocuses on high-leverage strategic work"
     ],
     solutionIcon: "Sparkles",
-    accent: "from-violet-500 to-purple-600"
+    accent: "from-brand-primary to-brand-accent"
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const problemsData = [
       "3.8x increase in qualified discovery meetings"
     ],
     solutionIcon: "TrendingUp",
-    accent: "from-cyan-400 to-blue-600"
+    accent: "from-brand-secondary to-brand-accent"
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ export const problemsData = [
       "Single source of truth with strict access security"
     ],
     solutionIcon: "Network",
-    accent: "from-fuchsia-500 to-pink-600"
+    accent: "from-brand-accent to-brand-primary"
   },
   {
     id: 4,
@@ -77,6 +77,6 @@ export const problemsData = [
       "Smooth human escalation when empathy is needed"
     ],
     solutionIcon: "ShieldCheck",
-    accent: "from-emerald-400 to-teal-500"
+    accent: "from-brand-secondary to-brand-primary"
   }
 ];

@@ -39,7 +39,7 @@ export function Modal({ isOpen, onClose, title, children, maxWidth = 'max-w-2xl'
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-            className={`relative w-full ${maxWidth} glass-card border border-violet-500/30 rounded-2xl p-6 sm:p-8 shadow-[0_20px_60px_-15px_rgba(139,92,246,0.35)] z-10 max-h-[90vh] overflow-y-auto`}
+            className={`relative w-full ${maxWidth} glass-card border border-brand-primary/30 rounded-2xl p-6 sm:p-8 shadow-brand-primary z-10 max-h-[90vh] overflow-y-auto`}
             role="dialog"
             aria-modal="true"
           >

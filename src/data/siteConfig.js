@@ -6,15 +6,14 @@ export const siteConfig = {
   email: "hello@codekrexx.com",
   phone: "+1 (555) 329-AI24",
   location: "San Francisco, CA & Remote Worldwide",
-  calendlyUrl: "https://calendly.com", // Placeholder booking link
+  calendlyUrl: "https://calendly.com",
   navLinks: [
-    { name: "Services", href: "#services" },
-    { name: "How We Work", href: "#how-we-work" },
-    { name: "Live Demo", href: "#demo" },
-    { name: "Projects", href: "#projects" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "#services", id: "services" },
+    { name: "How We Work", href: "#how-we-work", id: "how-we-work" },
+    { name: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
+    { name: "Testimonials", href: "#testimonials", id: "testimonials" },
+    { name: "FAQ", href: "#faq", id: "faq" },
+    { name: "Contact", href: "#contact", id: "contact" },
   ],
   socials: [
     { name: "GitHub", href: "https://github.com", icon: "Github" },

@@ -28,6 +28,8 @@ function SocialIcon({ name }) {
   }
 }
 
+const CURRENT_YEAR = 2026;
+
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -35,8 +37,8 @@ export function Footer() {
 
   return (
     <footer className="relative bg-[#05050A] border-t border-white/10 dark:border-white/10 light:border-slate-200 pt-16 pb-12 overflow-hidden">
-      {/* Subtle top neon ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+      {/* Subtle top brand ambient line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-brand-secondary/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-white/10 dark:border-white/10 light:border-slate-200">
@@ -58,7 +60,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-400/40 transition-all cursor-pointer"
+                  className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-brand-secondary hover:border-brand-secondary/40 transition-all cursor-pointer"
                   aria-label={`Codekrexx on ${social.name}`}
                 >
                   <SocialIcon name={social.name} />
@@ -74,32 +76,32 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
-                <a href="#services" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
                   Autonomous AI Agents
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
                   Process Automation (n8n/Python)
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
                   AI Customer Support Bots
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
                   Lead Gen & Outbound AI
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
                   Custom AI Web Applications
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
                   Enterprise RAG & Data Lakes
                 </a>
               </li>
@@ -113,33 +115,33 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
-                <a href="#how-we-work" className="hover:text-cyan-400 transition-colors">
+                <a href="#services" className="hover:text-brand-secondary transition-colors">
+                  Services & Solutions
+                </a>
+              </li>
+              <li>
+                <a href="#how-we-work" className="hover:text-brand-secondary transition-colors">
                   Our 4-Step Process
                 </a>
               </li>
               <li>
-                <a href="#demo" className="hover:text-cyan-400 transition-colors">
-                  Interactive AI Demo
+                <a href="#tech-stack" className="hover:text-brand-secondary transition-colors">
+                  Tech Stack Ecosystem
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-cyan-400 transition-colors">
-                  Case Studies & Metrics
+                <a href="#testimonials" className="hover:text-brand-secondary transition-colors">
+                  Client Feedback
                 </a>
               </li>
               <li>
-                <a href="#why-us" className="hover:text-cyan-400 transition-colors">
-                  Why Codekrexx
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-cyan-400 transition-colors">
+                <a href="#faq" className="hover:text-brand-secondary transition-colors">
                   FAQ & Pricing
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-cyan-400 transition-colors">
-                  Book Free Consultation
+                <a href="#contact" className="hover:text-brand-secondary transition-colors">
+                  Contact Engineering
                 </a>
               </li>
             </ul>
@@ -151,13 +153,13 @@ export function Footer() {
               Governance & SLA
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
-              <li className="flex items-center gap-1.5 text-cyan-400 font-mono">
+              <li className="flex items-center gap-1.5 text-brand-secondary font-mono">
                 &bull; Zero Data Retention (ZDR)
               </li>
-              <li className="flex items-center gap-1.5 text-violet-400 font-mono">
+              <li className="flex items-center gap-1.5 text-brand-primary font-mono">
                 &bull; SOC2 Type II Architecture
               </li>
-              <li className="flex items-center gap-1.5 text-fuchsia-400 font-mono">
+              <li className="flex items-center gap-1.5 text-brand-accent font-mono">
                 &bull; HIPAA Compliant Storage
               </li>
               <li className="flex items-center gap-1.5 text-slate-400">
@@ -174,7 +176,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
           <div>
-            &copy; {new Date().getFullYear()} {siteConfig.name} Technologies, Inc. All rights reserved.
+            &copy; {CURRENT_YEAR} {siteConfig.name} Technologies, Inc. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">
@@ -186,7 +188,7 @@ export function Footer() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="p-2 rounded-xl bg-white/5 hover:bg-cyan-500/20 text-slate-400 hover:text-cyan-400 transition-all border border-white/10 hover:border-cyan-400/40 cursor-pointer"
+              className="p-2 rounded-xl bg-white/5 hover:bg-brand-secondary/20 text-slate-400 hover:text-brand-secondary transition-all border border-white/10 hover:border-brand-secondary/40 cursor-pointer"
               aria-label="Back to top of page"
               title="Back to top"
             >

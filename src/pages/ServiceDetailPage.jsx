@@ -31,20 +31,20 @@ export function ServiceDetailPage() {
         {/* Back Link */}
         <Link
           to="/#services"
-          className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-xs font-mono text-brand-secondary hover:text-brand-secondary-light transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" /> Back to All Services
         </Link>
 
         {/* Hero Banner for Service */}
-        <div className="relative rounded-3xl p-8 sm:p-14 overflow-hidden mb-16 border border-violet-500/30 bg-gradient-to-r from-violet-950/60 via-[#0e0d1f] to-cyan-950/60 shadow-2xl">
+        <div className="relative rounded-3xl p-8 sm:p-14 overflow-hidden mb-16 border border-brand-primary/30 bg-gradient-to-r from-brand-primary/20 via-[#0e0d1f] to-brand-secondary/20 shadow-2xl">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className={`p-3 rounded-2xl bg-gradient-to-tr ${service.color} text-white shadow-md`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-mono uppercase tracking-wider text-cyan-300 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800/40">
+                <span className="text-xs font-mono uppercase tracking-wider text-brand-secondary bg-brand-secondary/10 px-3 py-1 rounded-full border border-brand-secondary/30">
                   {service.badge} Solution
                 </span>
               </div>
@@ -74,9 +74,9 @@ export function ServiceDetailPage() {
           
           {/* Deliverables Column */}
           <div className="lg:col-span-7">
-            <GlassCard className="p-8 border-violet-500/20 h-full">
+            <GlassCard className="p-8 border-brand-primary/20 h-full">
               <h2 className="font-heading text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-cyan-400" /> Complete System Deliverables
+                <Sparkles className="w-5 h-5 text-brand-secondary" /> Complete System Deliverables
               </h2>
               <div className="space-y-4">
                 {service.deliverables.map((item, idx) => (
@@ -87,8 +87,8 @@ export function ServiceDetailPage() {
                 ))}
               </div>
 
-              <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-violet-900/30 to-cyan-900/30 border border-cyan-500/30">
-                <div className="text-xs font-mono uppercase text-cyan-300 font-bold mb-1">
+              <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-brand-primary/20 via-brand-accent/20 to-brand-secondary/20 border border-brand-secondary/30">
+                <div className="text-xs font-mono uppercase text-brand-secondary font-bold mb-1">
                   Expected Impact Guarantee:
                 </div>
                 <div className="text-sm font-semibold text-white">
@@ -100,14 +100,14 @@ export function ServiceDetailPage() {
 
           {/* Use Cases Column */}
           <div className="lg:col-span-5">
-            <GlassCard className="p-8 border-cyan-500/20 h-full">
+            <GlassCard className="p-8 border-brand-secondary/20 h-full">
               <h2 className="font-heading text-xl font-bold text-white mb-6">
                 Real-World Applications
               </h2>
               <div className="space-y-4">
                 {service.useCases.map((useCase, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-violet-950/30 border border-violet-800/30">
-                    <div className="text-xs font-mono text-cyan-400 uppercase font-bold mb-1">
+                  <div key={idx} className="p-4 rounded-xl bg-brand-primary/10 border border-brand-primary/20">
+                    <div className="text-xs font-mono text-brand-secondary uppercase font-bold mb-1">
                       Scenario 0{idx + 1}
                     </div>
                     <div className="text-sm text-slate-300">
@@ -122,9 +122,9 @@ export function ServiceDetailPage() {
                   variant="secondary"
                   size="md"
                   className="w-full"
-                  onClick={() => navigate('/#demo')}
+                  onClick={() => navigate('/#contact')}
                 >
-                  Test in Live AI Simulator
+                  Contact Our Architects
                 </Button>
               </div>
             </GlassCard>

@@ -30,7 +30,7 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="py-24 relative overflow-hidden">
       {/* Background ambient glow */}
-      <div className="glow-orb w-[600px] h-[600px] bg-fuchsia-600/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
+      <div className="glow-orb w-[600px] h-[600px] bg-brand-primary/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -58,7 +58,7 @@ export function Testimonials() {
                 transition={{ duration: 0.45, ease: 'easeInOut' }}
                 className="w-full"
               >
-                <GlassCard className="p-8 sm:p-12 border-violet-500/30 relative shadow-2xl">
+                <GlassCard className="p-8 sm:p-12 border-brand-primary/30 relative shadow-2xl">
                   {/* Decorative Quote Icon */}
                   <Quote className="absolute top-6 right-8 w-16 h-16 text-white/5 dark:text-white/5 light:text-slate-200 pointer-events-none" />
 
@@ -82,7 +82,7 @@ export function Testimonials() {
                   {/* Author Meta & Metric Highlight */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-white/10 dark:border-white/10 light:border-slate-200">
                     <div className="flex items-center gap-3.5">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-violet-600 to-cyan-400 p-0.5 shadow-md">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-primary via-brand-accent to-brand-secondary p-0.5 shadow-md">
                         <img
                           src={current.avatar}
                           alt={current.author}
@@ -101,13 +101,13 @@ export function Testimonials() {
                           {current.author}
                         </div>
                         <div className="text-xs text-slate-400">
-                          {current.role} &bull; <span className="text-cyan-400">{current.company}</span>
+                          {current.role} &bull; <span className="text-brand-secondary">{current.company}</span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-violet-950/40 text-violet-300 border border-violet-800/40 text-xs font-mono">
-                      <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-primary/15 text-brand-primary-light border border-brand-primary/30 text-xs font-mono">
+                      <Sparkles className="w-3.5 h-3.5 text-brand-secondary" />
                       <span>{current.metricHighlight}</span>
                     </div>
                   </div>
@@ -126,7 +126,7 @@ export function Testimonials() {
                   onClick={() => setCurrentIndex(idx)}
                   className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                     currentIndex === idx
-                      ? 'w-8 bg-gradient-to-r from-violet-500 to-cyan-400 shadow-[0_0_8px_#22d3ee]'
+                      ? 'w-8 bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary shadow-brand-secondary'
                       : 'w-2 bg-white/20 dark:bg-white/20 light:bg-slate-300 hover:bg-white/40'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
@@ -138,7 +138,7 @@ export function Testimonials() {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="p-2.5 rounded-xl border border-white/10 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 hover:text-cyan-400 transition-colors cursor-pointer"
+                className="p-2.5 rounded-xl border border-white/10 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 hover:text-brand-secondary transition-colors cursor-pointer"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -146,7 +146,7 @@ export function Testimonials() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="p-2.5 rounded-xl border border-white/10 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 hover:text-cyan-400 transition-colors cursor-pointer"
+                className="p-2.5 rounded-xl border border-white/10 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 hover:text-brand-secondary transition-colors cursor-pointer"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-5 h-5" />

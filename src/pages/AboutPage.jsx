@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Shield, Cpu, Target, Users, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Shield, Cpu, Target, Users, Sparkles } from 'lucide-react';
 import { Navbar } from '../sections/Navbar';
 import { Footer } from '../sections/Footer';
 import { GlassCard } from '../components/GlassCard';
 import { Button } from '../components/Button';
-import { siteConfig } from '../data/siteConfig';
 
 export function AboutPage() {
   const navigate = useNavigate();
@@ -40,14 +39,14 @@ export function AboutPage() {
       <main className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors mb-6"
+          className="inline-flex items-center gap-2 text-xs font-mono text-brand-secondary hover:text-brand-secondary-light transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Home
         </Link>
 
         {/* Hero Section */}
         <div className="max-w-4xl mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-2 block">
+          <span className="text-xs font-mono uppercase tracking-widest text-brand-secondary font-semibold mb-2 block">
             ABOUT CODEKREXX
           </span>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
@@ -61,14 +60,14 @@ export function AboutPage() {
         {/* Core Principles */}
         <div className="mb-20">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-cyan-400" /> Engineering Principles
+            <Sparkles className="w-6 h-6 text-brand-secondary" /> Engineering Principles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {principles.map((p, idx) => {
               const Icon = p.icon;
               return (
-                <GlassCard key={idx} className="p-8 border-violet-500/20">
-                  <div className="p-3.5 rounded-2xl bg-gradient-to-tr from-violet-600 to-cyan-500 text-white w-fit mb-5 shadow-md">
+                <GlassCard key={idx} className="p-8 border-brand-primary/20">
+                  <div className="p-3.5 rounded-2xl bg-gradient-to-tr from-brand-primary to-brand-secondary text-white w-fit mb-5 shadow-md">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-heading text-xl font-bold text-white mb-2">
@@ -84,7 +83,7 @@ export function AboutPage() {
         </div>
 
         {/* Mission Banner */}
-        <div className="relative rounded-3xl p-10 sm:p-14 border border-violet-500/40 bg-gradient-to-r from-violet-950/80 via-[#100e2b]/90 to-cyan-950/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="relative rounded-3xl p-10 sm:p-14 border border-brand-primary/40 bg-gradient-to-r from-brand-primary/20 via-[#100e2b]/90 to-brand-secondary/20 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-2">
               Want to automate your team's routine workload?

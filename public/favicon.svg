@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8B5CF6"/>
-      <stop offset="50%" stop-color="#D946EF"/>
+    <linearGradient id="codekrexx-brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
       <stop offset="100%" stop-color="#06B6D4"/>
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -11,16 +11,16 @@
     </filter>
   </defs>
   <!-- Background rounded squircle -->
-  <rect width="64" height="64" rx="16" fill="#0A0A14"/>
-  <rect width="64" height="64" rx="16" stroke="url(#g1)" stroke-width="1.5" stroke-opacity="0.5"/>
-  <!-- Futuristic Hexagonal Neural Core & K-accent -->
-  <polygon points="32,10 50,20 50,42 32,52 14,42 14,20" stroke="url(#g1)" stroke-width="2.5" fill="none" opacity="0.4"/>
+  <rect width="64" height="64" rx="16" fill="#07070E"/>
+  <rect width="64" height="64" rx="16" stroke="url(#codekrexx-brand-grad)" stroke-width="1.5" stroke-opacity="0.5"/>
+  <!-- Futuristic Hexagonal Neural Core -->
+  <polygon points="32,10 50,20 50,42 32,52 14,42 14,20" stroke="url(#codekrexx-brand-grad)" stroke-width="2.5" fill="none" opacity="0.35"/>
   <!-- K Glyph constructed from AI circuit vectors -->
-  <path d="M22 18 V46 M22 32 L38 18 M29 27 L42 46" stroke="url(#g1)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
-  <!-- Small Neural Nodes -->
-  <circle cx="22" cy="18" r="3" fill="#8B5CF6"/>
-  <circle cx="22" cy="46" r="3" fill="#8B5CF6"/>
+  <path d="M22 18 V46 M22 32 L38 18 M29 27 L42 46" stroke="url(#codekrexx-brand-grad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Neural Nodes -->
+  <circle cx="22" cy="18" r="3" fill="#7C3AED"/>
+  <circle cx="22" cy="46" r="3" fill="#7C3AED"/>
   <circle cx="38" cy="18" r="3" fill="#06B6D4"/>
-  <circle cx="42" cy="46" r="3" fill="#D946EF"/>
+  <circle cx="42" cy="46" r="3" fill="#3B82F6"/>
   <circle cx="22" cy="32" r="2.5" fill="#FFFFFF"/>
 </svg>

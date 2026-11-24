@@ -1,17 +1,43 @@
 # Codekrexx | Autonomous AI Solutions & Enterprise Automation
 
-Production-grade, award-winning frontend marketing website for **Codekrexx** — an AI startup engineering autonomous AI agents, enterprise business process automation, context-aware chatbots, automated outbound lead generation, and custom LLM integrations.
+Clean, modern, production-grade frontend marketing website for **Codekrexx** — an AI startup engineering autonomous AI agents, enterprise business process automation, context-aware chatbots, automated outbound lead generation, and custom LLM integrations.
 
 ---
 
-## 🚀 Live Demo & Tech Stack
+## 🎨 Unified Codekrexx Logo Palette
+
+All brand gradients, shadows, text accents, and animations are strictly derived from the unified Codekrexx logo color system defined in `tailwind.config.js` and `src/index.css`:
+
+- **Primary**: `#7C3AED` (Electric Violet)
+- **Secondary**: `#06B6D4` (Cyber Cyan)
+- **Accent**: `#3B82F6` (Electric Blue)
+- **Dark Background**: `#07070E` (Deep space navy / near-black)
+- **Light Mode Support**: `#F8FAFC` (Clean high-contrast theme toggle)
+
+---
+
+## 🚀 Tech Stack
 
 - **Framework**: React 19 + Vite
-- **Styling**: Tailwind CSS v3 + CSS Variables (Dark theme by default with light-mode toggle)
-- **Animation**: Framer Motion (3D cards, scroll reveals, timeline drawing, modal popups, word rotators)
-- **Icons**: Lucide React + custom inline SVGs
-- **Particles / Canvas**: Custom interactive neural-network canvas responding to mouse physics
-- **Effects**: `canvas-confetti` celebration on demo lead submissions, glassmorphism cards, glowing cursor follower
+- **Styling**: Tailwind CSS v3 + CSS Variables
+- **Animation**: Framer Motion (scroll reveals, accordion, timeline draw, ambient drifting canvas)
+- **Icons**: Lucide React + custom SVGs
+- **Particles**: Lightweight HTML5 neural canvas (ambient drifting particle mesh with zero mouse interference)
+
+---
+
+## 📋 Section Layout (in exact order)
+
+1. **Navbar**: Sticky glassmorphism header with active-section indicator (`useScrollSpy`), theme toggle, and booking CTA.
+2. **Hero**: Headline with dynamic word rotator (*"Automate / Scale / Innovate / Accelerate / Solve"*), dual CTAs (*"Get Started"* & *"Our Services"*), and active agent node console.
+3. **Problem to Solution**: 4 interactive 3D flip cards (problem bottleneck on front, automated Codekrexx fix on back).
+4. **Services**: 6 capability cards with in-card expandable deliverables and full architectural blueprint modals.
+5. **How We Work**: Animated 4-phase agile timeline (Discover, Design, Build, Deploy & Improve) with scrolling vertical line draw.
+6. **Tech Stack**: Dual-row infinite scrolling logo marquee (*"Frontier AI & Enterprise Infrastructure Ecosystem"*) pausing on hover.
+7. **Testimonials**: Auto-playing client feedback carousel with swipe support, indicator dots, and sample tags.
+8. **FAQ**: Smooth animated accordion covering project pricing, timelines, data governance, and legacy system integration.
+9. **Contact**: High-impact gradient banner with direct engineering access, one-click email copying, phone line, headquarters, and social channels.
+10. **Footer**: Brand glyph, capability links, navigation shortcuts, security whitepaper notice, and smooth back-to-top button.
 
 ---
 
@@ -19,63 +45,58 @@ Production-grade, award-winning frontend marketing website for **Codekrexx** —
 
 ```text
 codekrexx/
+├── index.html                     # SEO metadata, Open Graph tags, Space Grotesk & Inter fonts
+├── package.json                   # React 19, Vite, Tailwind CSS, Framer Motion, Lucide
+├── tailwind.config.js             # Brand palette (#7C3AED, #06B6D4, #3B82F6) & shadows
+├── postcss.config.js              # PostCSS with Tailwind & Autoprefixer
+├── vercel.json                    # Single-page client routing rewrites for Vercel
+├── README.md                      # Project documentation and customization guide
 ├── public/
-│   └── favicon.svg           # Custom glowing neon hexagon SVG icon mark
-├── src/
-│   ├── assets/               # Static images & graphics
-│   ├── components/           # Reusable UI primitives
-│   │   ├── AnimatedCounter.jsx   # Counts up numbers smoothly on scroll into view
-│   │   ├── Button.jsx            # Shimmer gradient CTA, secondary, outline, ghost
-│   │   ├── CursorFollower.jsx    # Glowing desktop mouse follower (disabled on touch)
-│   │   ├── GlassCard.jsx         # 3D tilt/parallax card with ambient hover glow
-│   │   ├── HeroCanvas.jsx        # Neural particle mesh reacting to mouse proximity
-│   │   ├── Logo.jsx              # Stylized Codekrexx SVG mark + gradient typography
-│   │   ├── Modal.jsx             # Accessible backdrop-blur popup with keyboard trap
-│   │   ├── Reveal.jsx            # Scroll reveal fade/slide with reduced-motion support
-│   │   ├── ScrollProgressBar.jsx # Top viewport scroll progress indicator
-│   │   ├── SectionHeading.jsx    # Pill badge + gradient headline + subtext
-│   │   └── ThemeToggle.jsx       # Dark / Light theme toggle with animated icons
-│   ├── data/                 # All copy & content in structured data files
-│   │   ├── aiDemoData.js         # Simulator prompt chips, responses & LLM API hook
-│   │   ├── blogData.js           # Insights & research posts
-│   │   ├── differentiatorsData.js# 4 key pillars & animated stats counters
-│   │   ├── faqData.js            # Accordion Q&A (pricing, security, SLAs)
-│   │   ├── problemsData.js       # 4 Problem-to-Solution interactive 3D flip cards
-│   │   ├── processData.js        # 4-step agile timeline (Discover, Design, Build, Deploy)
-│   │   ├── projectsData.js       # 6 realistic filterable case studies with metrics
-│   │   ├── servicesData.js       # 6 core service architectures & deliverables
-│   │   ├── siteConfig.js         # Brand metadata, nav items, socials, contact info
-│   │   └── techStackData.js      # Infinite marquee tech logos
-│   ├── hooks/
-│   │   ├── useScrollSpy.js       # Highlights active navbar section while scrolling
-│   │   └── useTheme.jsx          # Dark / Light theme context & localStorage sync
-│   ├── pages/                # Main landing page + optional subpages
-│   │   ├── AboutPage.jsx         # /about - Principles, mission, team
-│   │   ├── BlogPage.jsx          # /blog - Articles & technical research
-│   │   ├── HomePage.jsx          # / - Complete 13-section landing page
-│   │   ├── NotFoundPage.jsx      # 404 - Cyber-styled not found page
-│   │   ├── ProjectsPage.jsx      # /projects - Full filterable portfolio
-│   │   └── ServiceDetailPage.jsx # /services/:slug - Deep-dive architecture specs
-│   ├── sections/             # 13 Core Sections in sequential order
-│   │   ├── 01. Navbar.jsx        # Sticky glass blur, nav links, CTA, mobile drawer
-│   │   ├── 02. Hero.jsx          # Word rotator, 3D agent nodes, dual CTAs
-│   │   ├── 03. ProblemToSolution.jsx # 4 3D flip cards (problem front / fix back)
-│   │   ├── 04. Services.jsx      # 6 cards with in-card expansion & full modal
-│   │   ├── 05. HowWeWork.jsx     # Drawing SVG scroll timeline (4 phases)
-│   │   ├── 06. LiveAiDemo.jsx    # Chat simulator with prompt chips & mock LLM
-│   │   ├── 07. Projects.jsx      # Filterable case study cards with metrics
-│   │   ├── 08. WhyCodekrexx.jsx  # 4 differentiators + animated counters
-│   │   ├── 09. TechStackMarquee.jsx # Dual-row infinite pause-on-hover marquee
-│   │   ├── 10. Testimonials.jsx  # Auto-playing carousel with swipe & sample tags
-│   │   ├── 11. FAQ.jsx           # Animated smooth accordion with full answers
-│   │   ├── 12. Contact.jsx       # Gradient banner + validated form + demo state
-│   │   └── 13. Footer.jsx        # Brand links, SLA guarantees, back to top
-│   ├── App.jsx               # Lazy-loaded router with suspense fallback
-│   ├── index.css             # Tailwind layers, scrollbars, gradients, neon glows
-│   └── main.jsx              # React 19 application entry point
-├── index.html                # SEO meta tags, OpenGraph, Space Grotesk & Inter fonts
-├── tailwind.config.js        # Electric violet, cyan, magenta neon palette & animations
-└── vite.config.js            # Vite build configuration
+│   ├── favicon.svg                # Custom brand-colored AI agent node SVG favicon
+│   └── _redirects                 # Single-page client routing fallback for Netlify
+└── src/
+    ├── main.jsx                   # React 19 application entry point
+    ├── App.jsx                    # Lazy-loaded router with suspense fallback & progress bar
+    ├── index.css                  # CSS variables, grid pattern, scrollbar styling
+    ├── hooks/
+    │   ├── useTheme.jsx           # Dark / Light theme context & localStorage sync
+    │   └── useScrollSpy.js        # Active section tracking for sticky navbar
+    ├── components/
+    │   ├── Button.jsx             # Gradient CTA, secondary, outline & ghost variants
+    │   ├── GlassCard.jsx          # Clean glass card with hover glow and border styling
+    │   ├── HeroCanvas.jsx         # Ambient drifting neural canvas (no mouse interference)
+    │   ├── Logo.jsx               # Codekrexx logo mark with brand gradient
+    │   ├── Modal.jsx              # Accessible backdrop-blur dialog
+    │   ├── Reveal.jsx             # Scroll reveal wrapper respecting prefers-reduced-motion
+    │   ├── ScrollProgressBar.jsx  # Top viewport scroll progress indicator
+    │   ├── SectionHeading.jsx     # Glowing badge + gradient headline + subtext
+    │   └── ThemeToggle.jsx        # Dark / Light mode toggle button with rotating sun/moon
+    ├── data/                      # 100% of website copy in structured data files
+    │   ├── blogData.js            # Sample research and insights
+    │   ├── faqData.js             # Accordion Q&A (pricing, security, SLAs)
+    │   ├── problemsData.js        # 4 Problem-to-Solution interactive flip card specs
+    │   ├── processData.js         # 4-step agile timeline (Discover, Design, Build, Deploy)
+    │   ├── servicesData.js        # 6 core service architectures & deliverables
+    │   ├── siteConfig.js          # Brand metadata, nav items, socials, contact info
+    │   └── techStackData.js       # Infinite marquee technology logos & categories
+    │   └── testimonialsData.js    # Client reviews with sample badges & ratings
+    ├── sections/                  # 10 Core Sections in sequential order
+    │   ├── Navbar.jsx             # 1. Sticky glass navbar with active spy & theme toggle
+    │   ├── Hero.jsx               # 2. Word rotator, 3D agent nodes, dual CTAs
+    │   ├── ProblemToSolution.jsx  # 3. 4 3D flip cards (problem on front, fix on back)
+    │   ├── Services.jsx           # 4. 6 cards with in-card expand & full modal
+    │   ├── HowWeWork.jsx          # 5. Drawing vertical SVG scroll timeline (4 phases)
+    │   ├── TechStackMarquee.jsx   # 6. Dual-row infinite marquee immediately after How We Work
+    │   ├── Testimonials.jsx       # 7. Auto-playing carousel with swipe & sample tags
+    │   ├── FAQ.jsx                # 8. Smooth animated accordion with full answers
+    │   ├── Contact.jsx            # 9. Gradient banner + direct contact channels
+    │   └── Footer.jsx             # 10. Brand links, SLA guarantees & back-to-top button
+    └── pages/                     # Extra subpages built with code-splitting
+        ├── HomePage.jsx           # Complete 10-section landing page with booking modal
+        ├── ServiceDetailPage.jsx  # /services/:slug deep-dive architecture specs
+        ├── AboutPage.jsx          # /about company vision, principles & mission
+        ├── BlogPage.jsx           # /blog insights & research articles
+        └── NotFoundPage.jsx       # 404 cyber error page with return link
 ```
 
 ---
@@ -87,109 +108,35 @@ codekrexx/
    cd c:\Users\bharg\Downloads\codekrexx
    ```
 
-2. Dependencies are already installed! If you ever need to reinstall:
-   ```bash
-   npm install
-   ```
-
-3. Start the Vite local development server:
+2. Start the Vite local development server:
    ```bash
    npm run dev
    ```
    Open your browser at `http://localhost:5173`.
 
-4. Run a production build:
+3. Run a production build:
    ```bash
    npm run build
    ```
 
-5. Preview the production build locally:
+4. Run code linter:
    ```bash
-   npm run preview
+   npm run lint
    ```
-
----
-
-## 🎨 How to Customize Content & Brand Colors
-
-### 1. Editing Website Content
-All copy is isolated in `/src/data/` so you never have to touch JSX files to edit text:
-- **Brand Info & Links**: Edit `src/data/siteConfig.js`.
-- **Services & Deliverables**: Edit `src/data/servicesData.js`.
-- **Flip Cards**: Edit `src/data/problemsData.js`.
-- **Process Steps**: Edit `src/data/processData.js`.
-- **AI Demo Responses**: Edit `src/data/aiDemoData.js`.
-- **Case Studies**: Edit `src/data/projectsData.js`.
-- **Metrics & Differentiators**: Edit `src/data/differentiatorsData.js`.
-- **FAQs**: Edit `src/data/faqData.js`.
-- **Testimonials**: Edit `src/data/testimonialsData.js`.
-
-### 2. Changing Brand Colors
-Brand colors are defined in `tailwind.config.js`:
-```javascript
-colors: {
-  brand: {
-    violet: '#8B5CF6',  // Primary electric violet
-    purple: '#A855F7',
-    cyan: '#06B6D4',    // High-contrast accent cyan
-    sky: '#38BDF8',
-    magenta: '#EC4899', // Highlight magenta
-    fuchsia: '#D946EF',
-  }
-}
-```
-
----
-
-## 🔌 Connecting Real Backend & APIs
-
-### 1. Contact Form (EmailJS, Formspree, or Webhook)
-Open `src/sections/Contact.jsx`. Inside `handleSubmit`, replace the `console.log` demo block with your live service:
-```javascript
-// Example using Formspree / Custom API
-const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(formData),
-});
-```
-
-### 2. Live AI Demo (Real OpenAI, Anthropic, or Gemini)
-Open `src/data/aiDemoData.js`. Replace `simulateAiResponse`:
-```javascript
-export async function generateRealAiSolution(prompt) {
-  const res = await fetch('/api/ai-architect', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt }),
-  });
-  return await res.json();
-}
-```
 
 ---
 
 ## 🚀 Deployment Guide
 
-### Deploying to Vercel (Recommended)
+### Deploying to Vercel
 1. Push your repository to GitHub.
-2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
-3. Select your repository. Vercel automatically detects **Vite**.
-4. Set Build Command: `npm run build` and Output Directory: `dist`.
-5. Create a `vercel.json` in the root for React Router single-page support:
-```json
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
-```
-6. Click **Deploy**.
+2. In [Vercel](https://vercel.com), click **"Add New Project"** and import the repository.
+3. Framework Preset: **Vite** (Build Command: `npm run build`, Output Directory: `dist`).
+4. `vercel.json` is already included to support client-side routing on refreshes.
+5. Click **Deploy**.
 
 ### Deploying to Netlify
-1. Create a `_redirects` file in `public/_redirects`:
-```text
-/*    /index.html   200
-```
-2. In Netlify, link your repository with:
-   - Build Command: `npm run build`
-   - Publish Directory: `dist`
-3. Click **Deploy Site**.
+1. Link your repository in [Netlify](https://netlify.com).
+2. Build command: `npm run build` | Publish directory: `dist`.
+3. `public/_redirects` is already included to handle SPA routing.
+4. Click **Deploy Site**.

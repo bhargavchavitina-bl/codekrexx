@@ -88,7 +88,7 @@ function FlipCard({ item }) {
           </div>
 
           <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 flex items-center justify-between text-xs text-slate-400 font-mono">
-            <span className="group-hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <span className="group-hover:text-brand-secondary transition-colors flex items-center gap-1.5">
               <RotateCw className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-500" />
               Click to flip for solution
             </span>
@@ -98,7 +98,7 @@ function FlipCard({ item }) {
 
         {/* BACK SIDE: SOLUTION */}
         <div
-          className="absolute inset-0 w-full h-full rounded-2xl glass-card p-6 flex flex-col justify-between border border-cyan-500/40 dark:border-cyan-500/40 light:border-slate-300 backface-hidden shadow-neon-cyan bg-gradient-to-br from-[#0c0f24] to-[#130d24]"
+          className="absolute inset-0 w-full h-full rounded-2xl glass-card p-6 flex flex-col justify-between border border-brand-secondary/40 dark:border-brand-secondary/40 light:border-slate-300 backface-hidden shadow-brand-secondary bg-gradient-to-br from-[#0c0f24] to-[#130d24]"
           style={{
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
@@ -106,16 +106,16 @@ function FlipCard({ item }) {
         >
           <div>
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-tr from-violet-600 to-cyan-500 text-white shadow-md">
+              <div className="p-3 rounded-xl bg-gradient-to-tr from-brand-primary via-brand-accent to-brand-secondary text-white shadow-md">
                 <SolutionIcon className="w-6 h-6" />
               </div>
-              <span className="text-[11px] font-mono font-semibold uppercase text-cyan-300 bg-cyan-950/60 px-2.5 py-1 rounded-full border border-cyan-500/40 flex items-center gap-1.5">
-                <Sparkles className="w-3 h-3 text-cyan-400" />
+              <span className="text-[11px] font-mono font-semibold uppercase text-brand-secondary bg-brand-secondary/15 px-2.5 py-1 rounded-full border border-brand-secondary/40 flex items-center gap-1.5">
+                <Sparkles className="w-3 h-3 text-brand-secondary" />
                 Codekrexx Fix
               </span>
             </div>
 
-            <h3 className="font-heading text-xl font-bold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-300">
+            <h3 className="font-heading text-xl font-bold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary-light">
               {item.solutionTitle}
             </h3>
 
@@ -126,7 +126,7 @@ function FlipCard({ item }) {
             <div className="space-y-2 mt-4">
               {item.solutionGains.map((gain, idx) => (
                 <div key={idx} className="flex items-start gap-2 text-xs text-slate-200">
-                  <div className="w-4 h-4 rounded-full bg-cyan-400/20 text-cyan-300 flex items-center justify-center shrink-0 mt-0.5 border border-cyan-400/40">
+                  <div className="w-4 h-4 rounded-full bg-brand-secondary/20 text-brand-secondary flex items-center justify-center shrink-0 mt-0.5 border border-brand-secondary/40">
                     <Check className="w-3 h-3" />
                   </div>
                   <span>{gain}</span>
@@ -135,7 +135,7 @@ function FlipCard({ item }) {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-cyan-400 font-mono">
+          <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brand-secondary font-mono">
             <span className="flex items-center gap-1.5">
               <RotateCw className="w-3.5 h-3.5" /> Click to flip back
             </span>
@@ -152,7 +152,7 @@ export function ProblemToSolution() {
   return (
     <section id="problems" className="py-24 relative overflow-hidden">
       {/* Background radial glow */}
-      <div className="glow-orb w-[600px] h-[600px] bg-violet-600/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
+      <div className="glow-orb w-[600px] h-[600px] bg-brand-primary/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading

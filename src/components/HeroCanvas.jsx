@@ -15,27 +15,27 @@ export function HeroCanvas({ className = '' }) {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    // Particle nodes
-    const particleCount = Math.min(Math.floor((width * height) / 18000), 75);
+    // Particle nodes count based on viewport
+    const particleCount = Math.min(Math.floor((width * height) / 20000), 65);
     const particles = [];
-    const mouse = { x: -1000, y: -1000, radius: 160 };
 
-    const colors = [
-      'rgba(139, 92, 246, ', // violet
-      'rgba(6, 182, 212, ',  // cyan
-      'rgba(217, 70, 239, ', // fuchsia
+    // Unified Codekrexx logo brand colors (Primary, Secondary, Accent)
+    const brandColors = [
+      'rgba(124, 58, 237, ', // Primary: #7C3AED
+      'rgba(6, 182, 212, ',  // Secondary: #06B6D4
+      'rgba(59, 130, 246, ', // Accent: #3B82F6
     ];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.75,
-        vy: (Math.random() - 0.5) * 0.75,
-        radius: Math.random() * 2.2 + 1.2,
-        colorBase: colors[Math.floor(Math.random() * colors.length)],
-        baseAlpha: Math.random() * 0.5 + 0.3,
-        pulseSpeed: Math.random() * 0.03 + 0.01,
+        vx: (Math.random() - 0.5) * 0.5, // Slow ambient drift
+        vy: (Math.random() - 0.5) * 0.5,
+        radius: Math.random() * 2 + 1,
+        colorBase: brandColors[Math.floor(Math.random() * brandColors.length)],
+        baseAlpha: Math.random() * 0.45 + 0.25,
+        pulseSpeed: Math.random() * 0.02 + 0.01,
         pulse: Math.random() * Math.PI,
       });
     }
@@ -45,25 +45,12 @@ export function HeroCanvas({ className = '' }) {
       height = canvas.height = window.innerHeight;
     };
 
-    const handleMouseMove = (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    };
-
-    const handleMouseLeave = () => {
-      mouse.x = -1000;
-      mouse.y = -1000;
-    };
-
     window.addEventListener('resize', handleResize);
-    window.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
 
     const render = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Draw and update particles
+      // Draw and update particles (ambient drift only - no mouse interaction)
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
@@ -72,61 +59,37 @@ export function HeroCanvas({ className = '' }) {
           p.y += p.vy;
           p.pulse += p.pulseSpeed;
 
-          // Bounce off boundaries
+          // Seamless edge bouncing
           if (p.x < 0 || p.x > width) p.vx *= -1;
           if (p.y < 0 || p.y > height) p.vy *= -1;
-
-          // Mouse interaction (gentle push)
-          const dxMouse = mouse.x - p.x;
-          const dyMouse = mouse.y - p.y;
-          const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-          if (distMouse < mouse.radius) {
-            const force = (mouse.radius - distMouse) / mouse.radius;
-            p.x -= (dxMouse / distMouse) * force * 2;
-            p.y -= (dyMouse / distMouse) * force * 2;
-          }
         }
 
-        const alpha = p.baseAlpha + Math.sin(p.pulse) * 0.2;
+        const alpha = p.baseAlpha + Math.sin(p.pulse) * 0.15;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `${p.colorBase}${Math.max(0.1, alpha)})`;
-        ctx.shadowColor = `${p.colorBase}0.8)`;
-        ctx.shadowBlur = 8;
+        ctx.shadowColor = `${p.colorBase}0.6)`;
+        ctx.shadowBlur = 6;
         ctx.fill();
-        ctx.shadowBlur = 0; // reset
+        ctx.shadowBlur = 0;
 
-        // Connect nearby particles
+        // Connect nearby particles with subtle lines
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          const maxDist = 135;
+          const maxDist = 130;
           if (dist < maxDist) {
-            const lineAlpha = (1 - dist / maxDist) * 0.22;
+            const lineAlpha = (1 - dist / maxDist) * 0.18;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(139, 92, 246, ${lineAlpha})`;
+            ctx.strokeStyle = `rgba(124, 58, 237, ${lineAlpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
-        }
-
-        // Connect to mouse
-        const dxM = p.x - mouse.x;
-        const dyM = p.y - mouse.y;
-        const distM = Math.sqrt(dxM * dxM + dyM * dyM);
-        if (distM < mouse.radius) {
-          const lineAlpha = (1 - distM / mouse.radius) * 0.35;
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(6, 182, 212, ${lineAlpha})`;
-          ctx.lineWidth = 1.2;
-          ctx.stroke();
         }
       }
 
@@ -137,8 +100,6 @@ export function HeroCanvas({ className = '' }) {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(animationFrameId);
     };
   }, [shouldReduceMotion]);

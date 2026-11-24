@@ -27,7 +27,7 @@ export function HowWeWork() {
   return (
     <section id="how-we-work" className="py-24 relative overflow-hidden" ref={containerRef}>
       {/* Background ambient orbs */}
-      <div className="glow-orb w-[600px] h-[600px] bg-violet-600/10 top-1/3 left-1/2 -translate-x-1/2 -z-10" />
+      <div className="glow-orb w-[600px] h-[600px] bg-brand-primary/10 top-1/3 left-1/2 -translate-x-1/2 -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -45,7 +45,7 @@ export function HowWeWork() {
           <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-[2px] -translate-x-1/2 bg-white/10 dark:bg-white/10 light:bg-slate-200">
             <motion.div
               style={{ scaleY: lineHeight }}
-              className="w-full h-full origin-top bg-gradient-to-b from-cyan-400 via-violet-500 to-fuchsia-500 shadow-[0_0_12px_rgba(6,182,212,0.8)]"
+              className="w-full h-full origin-top bg-gradient-to-b from-brand-secondary via-brand-accent to-brand-primary shadow-brand-secondary"
             />
           </div>
 
@@ -70,13 +70,13 @@ export function HowWeWork() {
                       viewport={{ once: true, margin: '-60px' }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
-                      <GlassCard className="p-7 border-violet-500/20 group hover:border-cyan-400/40">
+                      <GlassCard className="p-7 border-brand-primary/20 group hover:border-brand-secondary/40">
                         {/* Header Pill */}
                         <div className="flex items-center justify-between mb-4">
-                          <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/50 px-3 py-1 rounded-full border border-cyan-800/40">
+                          <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-secondary bg-brand-secondary/10 px-3 py-1 rounded-full border border-brand-secondary/30">
                             {step.tag}
                           </span>
-                          <span className="text-2xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">
+                          <span className="text-2xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary">
                             {step.step}
                           </span>
                         </div>
@@ -97,7 +97,7 @@ export function HowWeWork() {
                         <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-2">
                           {step.deliverables.map((item, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-700">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                              <CheckCircle2 className="w-3.5 h-3.5 text-brand-secondary shrink-0" />
                               <span>{item}</span>
                             </div>
                           ))}
@@ -107,8 +107,8 @@ export function HowWeWork() {
                   </div>
 
                   {/* Center Node Circle */}
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-[#090a16] border border-cyan-400/40 items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.4)] z-20">
-                    <Icon className="w-5 h-5 text-cyan-300" />
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-[#090a16] border border-brand-secondary/40 items-center justify-center shadow-brand-secondary z-20">
+                    <Icon className="w-5 h-5 text-brand-secondary" />
                   </div>
 
                   {/* Empty side for layout balance */}

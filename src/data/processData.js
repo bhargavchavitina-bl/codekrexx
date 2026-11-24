@@ -7,7 +7,7 @@ export const processSteps = [
     icon: "Compass",
     deliverables: ["Process Bottleneck Audit", "ROI & Feasibility Matrix", "Agent Architecture Blueprint"],
     tag: "Days 1–5",
-    color: "from-cyan-400 to-blue-500"
+    color: "from-brand-secondary to-brand-accent"
   },
   {
     step: "02",
@@ -17,7 +17,7 @@ export const processSteps = [
     icon: "Sliders",
     deliverables: ["Tool-Calling Specs", "Security & Privacy Protocol", "Interactive Prototype / Flowchart"],
     tag: "Days 6–10",
-    color: "from-violet-500 to-indigo-600"
+    color: "from-brand-primary to-brand-accent"
   },
   {
     step: "03",
@@ -27,7 +27,7 @@ export const processSteps = [
     icon: "Code2",
     deliverables: ["Production Agent Pipelines", "Custom API & DB Connectors", "Testing Benchmark Suite"],
     tag: "Days 11–24",
-    color: "from-fuchsia-500 to-pink-600"
+    color: "from-brand-accent to-brand-primary"
   },
   {
     step: "04",
@@ -37,6 +37,6 @@ export const processSteps = [
     icon: "Rocket",
     deliverables: ["Zero-Downtime Rollout", "Real-Time Telemetry Dashboard", "30-Day SLA & Dedicated Support"],
     tag: "Day 25 Onward",
-    color: "from-emerald-400 to-cyan-500"
+    color: "from-brand-primary via-brand-accent to-brand-secondary"
   }
 ];

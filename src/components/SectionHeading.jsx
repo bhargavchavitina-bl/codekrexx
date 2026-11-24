@@ -8,7 +8,7 @@ export function SectionHeading({
   subtitle,
   align = 'center',
   className = '',
-  badgeColor = 'from-violet-500/20 to-cyan-500/20 text-cyan-300 border-cyan-500/30',
+  badgeColor = 'from-brand-primary/20 to-brand-secondary/20 text-brand-secondary border-brand-secondary/30',
 }) {
   const isCenter = align === 'center';
 
@@ -23,7 +23,7 @@ export function SectionHeading({
           transition={{ duration: 0.5 }}
           className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border backdrop-blur-md bg-gradient-to-r ${badgeColor}`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping inline-block" />
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-ping inline-block" />
           <span>{badge}</span>
         </motion.div>
       )}
@@ -39,7 +39,7 @@ export function SectionHeading({
         {highlight ? (
           <>
             {title.split(highlight)[0]}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary">
               {highlight}
             </span>
             {title.split(highlight)[1]}

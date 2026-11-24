@@ -16,7 +16,6 @@ import {
   Cloud, 
   Globe 
 } from 'lucide-react';
-import { SectionHeading } from '../components/SectionHeading';
 import { techStackList } from '../data/techStackData';
 
 const iconMap = {
@@ -38,14 +37,13 @@ const iconMap = {
 };
 
 export function TechStackMarquee() {
-  // Duplicate list to achieve infinite seamless looping
   const marqueeItems = [...techStackList, ...techStackList];
 
   return (
-    <section className="py-20 relative overflow-hidden bg-black/40 border-y border-white/5">
+    <section id="tech-stack" className="py-20 relative overflow-hidden bg-black/40 border-y border-white/5 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
         <span className="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold flex items-center justify-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
           Frontier AI & Enterprise Infrastructure Ecosystem
         </span>
       </div>
@@ -58,12 +56,9 @@ export function TechStackMarquee() {
             return (
               <div
                 key={`row1-${index}`}
-                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-cyan-400/50 transition-all select-none group cursor-pointer"
+                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-brand-secondary/50 transition-all select-none group cursor-pointer"
               >
-                <div
-                  className="p-2 rounded-xl bg-white/5 text-cyan-400 group-hover:scale-110 transition-transform"
-                  style={{ color: tech.color }}
-                >
+                <div className="p-2 rounded-xl bg-white/5 text-brand-secondary group-hover:scale-110 transition-transform">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
@@ -88,12 +83,9 @@ export function TechStackMarquee() {
             return (
               <div
                 key={`row2-${index}`}
-                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-violet-400/50 transition-all select-none group cursor-pointer"
+                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-brand-primary/50 transition-all select-none group cursor-pointer"
               >
-                <div
-                  className="p-2 rounded-xl bg-white/5 text-violet-400 group-hover:scale-110 transition-transform"
-                  style={{ color: tech.color }}
-                >
+                <div className="p-2 rounded-xl bg-white/5 text-brand-primary group-hover:scale-110 transition-transform">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
