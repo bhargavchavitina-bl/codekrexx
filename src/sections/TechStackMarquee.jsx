@@ -3,17 +3,12 @@ import {
   Sparkles, 
   Bot, 
   Cpu, 
-  Workflow, 
-  Layers, 
   Zap, 
   Terminal, 
   Activity, 
   Code, 
   Server, 
   Database, 
-  HardDrive, 
-  Box, 
-  Cloud, 
   Globe 
 } from 'lucide-react';
 import { techStackList } from '../data/techStackData';
@@ -22,22 +17,18 @@ const iconMap = {
   Sparkles,
   Bot,
   Cpu,
-  Workflow,
-  Layers,
   Zap,
   Terminal,
   Activity,
   Code,
   Server,
   Database,
-  HardDrive,
-  Box,
-  Cloud,
   Globe,
 };
 
 export function TechStackMarquee() {
-  const marqueeItems = [...techStackList, ...techStackList];
+  // Triple the items for a smooth seamless infinite loop on any screen resolution
+  const marqueeItems = [...techStackList, ...techStackList, ...techStackList];
 
   return (
     <section id="tech-stack" className="py-20 relative overflow-hidden bg-black/40 border-y border-white/5 scroll-mt-20">
@@ -58,7 +49,10 @@ export function TechStackMarquee() {
                 key={`row1-${index}`}
                 className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-brand-secondary/50 transition-all select-none group cursor-pointer"
               >
-                <div className="p-2 rounded-xl bg-white/5 text-brand-secondary group-hover:scale-110 transition-transform">
+                <div
+                  className="p-2 rounded-xl bg-white/5 text-brand-secondary group-hover:scale-110 transition-transform"
+                  style={{ color: tech.color }}
+                >
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
@@ -85,7 +79,10 @@ export function TechStackMarquee() {
                 key={`row2-${index}`}
                 className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-brand-primary/50 transition-all select-none group cursor-pointer"
               >
-                <div className="p-2 rounded-xl bg-white/5 text-brand-primary group-hover:scale-110 transition-transform">
+                <div
+                  className="p-2 rounded-xl bg-white/5 text-brand-primary group-hover:scale-110 transition-transform"
+                  style={{ color: tech.color }}
+                >
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>

@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { Compass, Sliders, Code2, Rocket, CheckCircle2 } from 'lucide-react';
 import { SectionHeading } from '../components/SectionHeading';
 import { GlassCard } from '../components/GlassCard';
-import { processSteps } from '../data/processData';
+import { processSteps, processSectionCopy } from '../data/processData';
 
 const iconMap = {
   Compass,
@@ -31,10 +31,10 @@ export function HowWeWork() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          badge="OUR PROCESS"
-          title="From bottleneck to autonomous deployment in 4 steps."
-          highlight="autonomous deployment"
-          subtitle="A battle-tested agile framework tailored for rapid agent engineering and production reliability without enterprise bureaucracy."
+          badge={processSectionCopy.badge}
+          title={processSectionCopy.title}
+          highlight={processSectionCopy.highlight}
+          subtitle={processSectionCopy.subtitle}
           align="center"
         />
 
@@ -71,7 +71,7 @@ export function HowWeWork() {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
                       <GlassCard className="p-7 border-brand-primary/20 group hover:border-brand-secondary/40">
-                        {/* Header Pill */}
+                        {/* Header Tag & Step Number */}
                         <div className="flex items-center justify-between mb-4">
                           <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-secondary bg-brand-secondary/10 px-3 py-1 rounded-full border border-brand-secondary/30">
                             {step.tag}
@@ -81,23 +81,21 @@ export function HowWeWork() {
                           </span>
                         </div>
 
-                        {/* Title & Phase */}
-                        <div className="text-xs font-mono text-slate-400 mb-1">
-                          Phase: {step.phase}
-                        </div>
-                        <h3 className="font-heading text-xl font-bold text-white dark:text-white light:text-slate-900 mb-3">
+                        {/* Title */}
+                        <h3 className="font-heading text-xl font-bold text-white dark:text-white light:text-slate-900 mb-3 leading-snug">
                           {step.title}
                         </h3>
 
-                        <p className="text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed mb-5">
+                        {/* Description */}
+                        <p className="text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed mb-5 font-sans">
                           {step.description}
                         </p>
 
-                        {/* Deliverables Checklist */}
-                        <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-2">
-                          {step.deliverables.map((item, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-700">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-brand-secondary shrink-0" />
+                        {/* Bullet Points */}
+                        <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-2.5">
+                          {step.bulletPoints.map((item, idx) => (
+                            <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300 dark:text-slate-300 light:text-slate-700 leading-normal">
+                              <CheckCircle2 className="w-4 h-4 text-brand-secondary shrink-0 mt-0.5" />
                               <span>{item}</span>
                             </div>
                           ))}

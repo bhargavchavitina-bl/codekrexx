@@ -34,10 +34,9 @@ All brand gradients, shadows, text accents, and animations are strictly derived 
 4. **Services**: 6 capability cards with in-card expandable deliverables and full architectural blueprint modals.
 5. **How We Work**: Animated 4-phase agile timeline (Discover, Design, Build, Deploy & Improve) with scrolling vertical line draw.
 6. **Tech Stack**: Dual-row infinite scrolling logo marquee (*"Frontier AI & Enterprise Infrastructure Ecosystem"*) pausing on hover.
-7. **Testimonials**: Auto-playing client feedback carousel with swipe support, indicator dots, and sample tags.
-8. **FAQ**: Smooth animated accordion covering project pricing, timelines, data governance, and legacy system integration.
-9. **Contact**: High-impact gradient banner with direct engineering access, one-click email copying, phone line, headquarters, and social channels.
-10. **Footer**: Brand glyph, capability links, navigation shortcuts, security whitepaper notice, and smooth back-to-top button.
+7. **FAQ**: Smooth animated accordion covering project pricing, timelines, data governance, and legacy system integration.
+8. **Contact**: High-impact gradient banner with direct engineering access, one-click email copying, phone line, headquarters, and social channels.
+9. **Footer**: Brand glyph, capability links, navigation shortcuts, security whitepaper notice, and smooth back-to-top button.
 
 ---
 
@@ -79,20 +78,18 @@ codekrexx/
     │   ├── servicesData.js        # 6 core service architectures & deliverables
     │   ├── siteConfig.js          # Brand metadata, nav items, socials, contact info
     │   └── techStackData.js       # Infinite marquee technology logos & categories
-    │   └── testimonialsData.js    # Client reviews with sample badges & ratings
-    ├── sections/                  # 10 Core Sections in sequential order
+    ├── sections/                  # 9 Core Sections in sequential order
     │   ├── Navbar.jsx             # 1. Sticky glass navbar with active spy & theme toggle
     │   ├── Hero.jsx               # 2. Word rotator, 3D agent nodes, dual CTAs
     │   ├── ProblemToSolution.jsx  # 3. 4 3D flip cards (problem on front, fix on back)
     │   ├── Services.jsx           # 4. 6 cards with in-card expand & full modal
     │   ├── HowWeWork.jsx          # 5. Drawing vertical SVG scroll timeline (4 phases)
     │   ├── TechStackMarquee.jsx   # 6. Dual-row infinite marquee immediately after How We Work
-    │   ├── Testimonials.jsx       # 7. Auto-playing carousel with swipe & sample tags
-    │   ├── FAQ.jsx                # 8. Smooth animated accordion with full answers
-    │   ├── Contact.jsx            # 9. Gradient banner + direct contact channels
-    │   └── Footer.jsx             # 10. Brand links, SLA guarantees & back-to-top button
+    │   ├── FAQ.jsx                # 7. Smooth animated accordion with full answers
+    │   ├── Contact.jsx            # 8. Gradient banner + direct contact channels
+    │   └── Footer.jsx             # 9. Brand links, SLA guarantees & back-to-top button
     └── pages/                     # Extra subpages built with code-splitting
-        ├── HomePage.jsx           # Complete 10-section landing page with booking modal
+        ├── HomePage.jsx           # Complete 9-section landing page with booking modal
         ├── ServiceDetailPage.jsx  # /services/:slug deep-dive architecture specs
         ├── AboutPage.jsx          # /about company vision, principles & mission
         ├── BlogPage.jsx           # /blog insights & research articles

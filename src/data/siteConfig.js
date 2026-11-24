@@ -11,7 +11,6 @@ export const siteConfig = {
     { name: "Services", href: "#services", id: "services" },
     { name: "How We Work", href: "#how-we-work", id: "how-we-work" },
     { name: "Tech Stack", href: "#tech-stack", id: "tech-stack" },
-    { name: "Testimonials", href: "#testimonials", id: "testimonials" },
     { name: "FAQ", href: "#faq", id: "faq" },
     { name: "Contact", href: "#contact", id: "contact" },
   ],

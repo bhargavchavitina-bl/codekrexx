@@ -1,32 +1,32 @@
 export const faqData = [
   {
-    id: "pricing",
-    question: "How does Codekrexx structure project pricing?",
-    answer: "We offer two transparent models tailored to project scope: 1) Fixed-Scope Sprints (typically $8,000–$25,000 depending on agent complexity, tools integrated, and SLA requirements), and 2) Dedicated AI Engineering Retainers (for ongoing agent evolution, prompt maintenance, and continuous optimization). Every engagement begins with an upfront discovery audit so there are zero surprise costs."
+    id: "startup-stage",
+    question: "1. We're a startup. Is AI automation worth investing in at our stage?",
+    answer: "You don't need to be a large company to benefit from automation. If your team spends time on repetitive tasks, managing leads, handling customer queries, or moving data between tools, automation can help you save time and work more efficiently. We focus on solutions that make sense for your current needs and budget."
   },
   {
-    id: "timelines",
-    question: "How quickly can we launch our custom AI solution?",
-    answer: "Most production agent workflows and automated pipelines are fully built, tested, and deployed within 2 to 4 weeks. Simpler automations and standard customer support bots can be launched in as few as 7–10 days. We follow rapid 1-week iterative milestones so you see tangible progress from week one."
+    id: "small-team",
+    question: "2. We have a small team. Can automation actually make a difference?",
+    answer: "Automation is particularly useful for small teams because it helps them handle more work without increasing their workload at every step. We look at the tasks slowing your team down and find practical ways to simplify them."
   },
   {
-    id: "project-types",
-    question: "What kinds of problems are best suited for Codekrexx?",
-    answer: "We excel at turning complex, repetitive, multi-step business operations into automated systems. This includes autonomous agent swarms, internal knowledge assistants with RAG, outbound sales pipelines, document extraction (PDFs, invoices, contracts), cross-SaaS ETL workflows, and custom AI-powered web applications."
+    id: "start-small",
+    question: "3. Can we start small and expand automation as our startup grows?",
+    answer: "Absolutely. You don't need to automate everything at once. We can start with one workflow that's taking up too much of your time, get it working properly, and gradually expand as your business grows and your needs change."
   },
   {
-    id: "data-security",
-    question: "How do you ensure our proprietary data and customer information remain secure?",
-    answer: "Data privacy is our foundational pillar. We utilize enterprise tier LLM endpoints with verified Zero Data Retention (ZDR) agreements—meaning your data is never used to train frontier public models. All vector databases and API communications are encrypted in transit (TLS 1.3) and at rest (AES-256). We support SOC2 and HIPAA compliant hosting."
+    id: "existing-tools",
+    question: "4. Can you work with the tools and software we're already using?",
+    answer: "In most cases, yes. We aim to work with your existing tools wherever possible rather than forcing you to change your entire setup. We'll first understand your current workflow and then determine how everything can be connected."
   },
   {
-    id: "legacy-integration",
-    question: "Can your agents work with our legacy software and custom internal databases?",
-    answer: "Yes. Our agents are not limited to modern APIs. We construct custom Python connectors, webhook adapters, direct SQL bridges (PostgreSQL, MySQL, SQL Server, Oracle), and headless browser automation routines to interact with legacy ERPs, internal portals, and proprietary databases seamlessly."
+    id: "where-to-start",
+    question: "5. What if we don't know exactly what we want to automate?",
+    answer: "That's completely fine. Many businesses know that certain tasks are taking too much time but aren't sure how to fix them. We can help identify those areas, suggest possible solutions, and figure out where automation would actually be useful."
   },
   {
-    id: "support-maintenance",
-    question: "What happens after our AI agents are deployed to production?",
-    answer: "Every deployment includes 30 days of complimentary hypercare support, real-time error telemetry monitoring, and performance tuning. Afterward, our optional maintenance plans provide continuous model updates (upgrading to the latest frontier models as they release), latency optimization, and dedicated SLA response times."
+    id: "business-control",
+    question: "6. Will we still have control over our business processes after automation?",
+    answer: "Yes. Automation is meant to make your work easier, not take control away from your team. We can design workflows around your requirements, including approval steps, notifications, and situations where a person needs to make the final decision."
   }
 ];

@@ -130,11 +130,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-brand-secondary transition-colors">
-                  Client Feedback
-                </a>
-              </li>
-              <li>
                 <a href="#faq" className="hover:text-brand-secondary transition-colors">
                   FAQ & Pricing
                 </a>

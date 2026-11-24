@@ -5,7 +5,6 @@ import { ProblemToSolution } from '../sections/ProblemToSolution';
 import { Services } from '../sections/Services';
 import { HowWeWork } from '../sections/HowWeWork';
 import { TechStackMarquee } from '../sections/TechStackMarquee';
-import { Testimonials } from '../sections/Testimonials';
 import { FAQ } from '../sections/FAQ';
 import { Contact } from '../sections/Contact';
 import { Footer } from '../sections/Footer';
@@ -54,17 +53,14 @@ export function HomePage() {
         {/* 6. Tech Stack (Immediately after How We Work) */}
         <TechStackMarquee />
 
-        {/* 7. Testimonials */}
-        <Testimonials />
-
-        {/* 8. FAQ */}
+        {/* 7. FAQ */}
         <FAQ />
 
-        {/* 9. Contact */}
+        {/* 8. Contact */}
         <Contact />
       </main>
 
-      {/* 10. Footer */}
+      {/* 9. Footer */}
       <Footer />
 
       {/* Book Consultation Modal */}

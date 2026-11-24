@@ -19,10 +19,10 @@ export function FAQ() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          badge="FREQUENTLY ASKED"
-          title="Everything you need to know about partnering with Codekrexx."
-          highlight="partnering with Codekrexx"
-          subtitle="Transparent answers regarding architecture, timeline velocity, security commitments, and enterprise integration capabilities."
+          badge="FREQUENTLY ASKED QUESTIONS"
+          title="A few things you might want to know before getting started."
+          highlight="getting started."
+          subtitle="Whether you're running a startup, managing a growing business, or simply looking to automate the way you work, here's what you should know about working with Codekrexx."
           align="center"
         />
 
