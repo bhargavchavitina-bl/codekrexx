@@ -1,0 +1,94 @@
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowLeft, Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Navbar } from '../sections/Navbar';
+import { Footer } from '../sections/Footer';
+import { GlassCard } from '../components/GlassCard';
+import { blogPosts } from '../data/blogData';
+
+export function BlogPage() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="relative min-h-screen bg-[#07070E] text-slate-100">
+      <Navbar onBookConsultation={() => navigate('/#contact')} />
+
+      <main className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors mb-6"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to Home
+        </Link>
+
+        {/* Page Title */}
+        <div className="max-w-3xl mb-12">
+          <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-2 block">
+            CODEKREXX RESEARCH & INSIGHTS
+          </span>
+          <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-white mb-4">
+            Autonomous Systems, RAG & Automation Engineering.
+          </h1>
+          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+            Practical architectural insights, benchmarks, and deep dives from our engineers shipping autonomous AI in enterprise environments.
+          </p>
+        </div>
+
+        {/* Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {blogPosts.map((post) => (
+            <GlassCard
+              key={post.id}
+              className="p-8 flex flex-col justify-between group border-white/10"
+              glowColor="rgba(6, 182, 212, 0.2)"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-mono font-semibold uppercase text-cyan-400 bg-cyan-950/40 px-2.5 py-1 rounded border border-cyan-800/40">
+                    {post.category}
+                  </span>
+                  <div className="flex items-center gap-3 text-xs text-slate-400">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5" /> {post.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" /> {post.readTime}
+                    </span>
+                  </div>
+                </div>
+
+                <h3 className="font-heading text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                  {post.title}
+                </h3>
+
+                <p className="text-sm text-slate-400 leading-relaxed mb-6 font-sans">
+                  {post.excerpt}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {post.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-300 border border-white/5"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                <span className="text-xs text-slate-400 font-medium">By {post.author}</span>
+                <span className="text-xs font-mono font-bold text-cyan-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Read Article &rarr;
+                </span>
+              </div>
+            </GlassCard>
+          ))}
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
