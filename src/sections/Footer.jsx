@@ -36,160 +36,55 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#05050A] border-t border-white/10 dark:border-white/10 light:border-slate-200 pt-16 pb-12 overflow-hidden">
+    <footer className="relative bg-[#05050A] border-t border-white/10 dark:border-white/10 light:border-slate-200 pt-14 pb-10 overflow-hidden">
       {/* Subtle top brand ambient line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-brand-secondary/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-white/10 dark:border-white/10 light:border-slate-200">
-          
-          {/* Brand Info & Mission */}
-          <div className="lg:col-span-2 space-y-4">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-10 border-b border-white/10 dark:border-white/10 light:border-slate-200">
+          {/* Brand Info & Summary */}
+          <div className="space-y-4 max-w-md">
             <a href="#" className="inline-block" aria-label="Codekrexx Home">
               <Logo />
             </a>
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed font-sans">
-              Codekrexx engineers production-grade autonomous AI agents, intelligent business process automations, and custom LLM integrations that scale enterprise operations 24/7.
+            <p className="text-sm text-slate-400 leading-relaxed font-sans">
+              Codekrexx builds practical AI agents, automated workflows, and custom integrations that simplify everyday business operations.
             </p>
-
-            {/* Socials */}
-            <div className="flex items-center gap-3 pt-2">
-              {siteConfig.socials.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-brand-secondary hover:border-brand-secondary/40 transition-all cursor-pointer"
-                  aria-label={`Codekrexx on ${social.name}`}
-                >
-                  <SocialIcon name={social.name} />
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Nav Column 1: Capabilities */}
-          <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white dark:text-white light:text-slate-900 mb-4">
-              AI Capabilities
-            </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  Autonomous AI Agents
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  Process Automation (n8n/Python)
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  AI Customer Support Bots
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  Lead Gen & Outbound AI
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  Custom AI Web Applications
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  Enterprise RAG & Data Lakes
-                </a>
-              </li>
-            </ul>
+          {/* Socials */}
+          <div className="flex items-center gap-3">
+            {siteConfig.socials.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-brand-secondary hover:border-brand-secondary/40 transition-all cursor-pointer"
+                aria-label={`Codekrexx on ${social.name}`}
+              >
+                <SocialIcon name={social.name} />
+              </a>
+            ))}
           </div>
-
-          {/* Nav Column 2: Navigation */}
-          <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white dark:text-white light:text-slate-900 mb-4">
-              Navigation
-            </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
-                  Services & Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#how-we-work" className="hover:text-brand-secondary transition-colors">
-                  Our 4-Step Process
-                </a>
-              </li>
-              <li>
-                <a href="#tech-stack" className="hover:text-brand-secondary transition-colors">
-                  Tech Stack Ecosystem
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-brand-secondary transition-colors">
-                  FAQ & Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-brand-secondary transition-colors">
-                  Contact Engineering
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Nav Column 3: Trust & Compliance */}
-          <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white dark:text-white light:text-slate-900 mb-4">
-              Governance & SLA
-            </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li className="flex items-center gap-1.5 text-brand-secondary font-mono">
-                &bull; Zero Data Retention (ZDR)
-              </li>
-              <li className="flex items-center gap-1.5 text-brand-primary font-mono">
-                &bull; SOC2 Type II Architecture
-              </li>
-              <li className="flex items-center gap-1.5 text-brand-accent font-mono">
-                &bull; HIPAA Compliant Storage
-              </li>
-              <li className="flex items-center gap-1.5 text-slate-400">
-                &bull; 99.9% Uptime Guarantee
-              </li>
-              <li className="flex items-center gap-1.5 text-slate-400">
-                &bull; Dedicated Incident SLA
-              </li>
-            </ul>
-          </div>
-
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
           <div>
-            &copy; {CURRENT_YEAR} {siteConfig.name} Technologies, Inc. All rights reserved.
+            &copy; {CURRENT_YEAR} {siteConfig.name}. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-6">
-            <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>
-            <span className="hover:text-slate-400 cursor-pointer">Security Whitepaper</span>
-            
-            {/* Back to Top Button */}
-            <button
-              type="button"
-              onClick={scrollToTop}
-              className="p-2 rounded-xl bg-white/5 hover:bg-brand-secondary/20 text-slate-400 hover:text-brand-secondary transition-all border border-white/10 hover:border-brand-secondary/40 cursor-pointer"
-              aria-label="Back to top of page"
-              title="Back to top"
-            >
-              <ArrowUp className="w-4 h-4" />
-            </button>
-          </div>
+          {/* Back to Top Button */}
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="p-2 rounded-xl bg-white/5 hover:bg-brand-secondary/20 text-slate-400 hover:text-brand-secondary transition-all border border-white/10 hover:border-brand-secondary/40 cursor-pointer"
+            aria-label="Back to top of page"
+            title="Back to top"
+          >
+            <ArrowUp className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </footer>

@@ -35,7 +35,7 @@ export function TechStackMarquee() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
         <span className="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold flex items-center justify-center gap-2">
           <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
-          Frontier AI & Enterprise Infrastructure Ecosystem
+          Tools & Technologies We Work With
         </span>
       </div>
 

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Calendar } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Logo } from '../components/Logo';
-import { Button } from '../components/Button';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
-export function Navbar({ onBookConsultation }) {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -72,18 +71,9 @@ export function Navbar({ onBookConsultation }) {
             })}
           </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Action Controls */}
+          <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
-            <Button
-              variant="primary"
-              size="sm"
-              icon={Calendar}
-              iconPosition="left"
-              onClick={onBookConsultation}
-            >
-              Book Consultation
-            </Button>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -126,20 +116,6 @@ export function Navbar({ onBookConsultation }) {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200">
-                <Button
-                  variant="primary"
-                  size="md"
-                  className="w-full"
-                  icon={ArrowRight}
-                  onClick={() => {
-                    closeMenu();
-                    if (onBookConsultation) onBookConsultation();
-                  }}
-                >
-                  Book Free Consultation
-                </Button>
-              </div>
             </div>
           </motion.div>
         )}

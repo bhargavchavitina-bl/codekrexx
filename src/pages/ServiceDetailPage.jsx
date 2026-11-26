@@ -25,7 +25,7 @@ export function ServiceDetailPage() {
 
   return (
     <div className="relative min-h-screen bg-[#07070E] text-slate-100">
-      <Navbar onBookConsultation={() => navigate('/#contact')} />
+      <Navbar />
 
       <main className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
@@ -64,19 +64,19 @@ export function ServiceDetailPage() {
               onClick={() => navigate('/#contact')}
               className="shrink-0"
             >
-              Get Custom Proposal
+              Get Started
             </Button>
           </div>
         </div>
 
-        {/* Technical Architecture & Deliverables Grid */}
+        {/* Deliverables & Examples Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
           
           {/* Deliverables Column */}
           <div className="lg:col-span-7">
             <GlassCard className="p-8 border-brand-primary/20 h-full">
               <h2 className="font-heading text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-brand-secondary" /> Complete System Deliverables
+                <Sparkles className="w-5 h-5 text-brand-secondary" /> What We Build
               </h2>
               <div className="space-y-4">
                 {service.deliverables.map((item, idx) => (
@@ -89,7 +89,7 @@ export function ServiceDetailPage() {
 
               <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-brand-primary/20 via-brand-accent/20 to-brand-secondary/20 border border-brand-secondary/30">
                 <div className="text-xs font-mono uppercase text-brand-secondary font-bold mb-1">
-                  Expected Impact Guarantee:
+                  How It Helps:
                 </div>
                 <div className="text-sm font-semibold text-white">
                   {service.outcomes}
@@ -102,13 +102,13 @@ export function ServiceDetailPage() {
           <div className="lg:col-span-5">
             <GlassCard className="p-8 border-brand-secondary/20 h-full">
               <h2 className="font-heading text-xl font-bold text-white mb-6">
-                Real-World Applications
+                Common Examples
               </h2>
               <div className="space-y-4">
                 {service.useCases.map((useCase, idx) => (
                   <div key={idx} className="p-4 rounded-xl bg-brand-primary/10 border border-brand-primary/20">
                     <div className="text-xs font-mono text-brand-secondary uppercase font-bold mb-1">
-                      Scenario 0{idx + 1}
+                      Example 0{idx + 1}
                     </div>
                     <div className="text-sm text-slate-300">
                       {useCase}
@@ -124,7 +124,7 @@ export function ServiceDetailPage() {
                   className="w-full"
                   onClick={() => navigate('/#contact')}
                 >
-                  Contact Our Architects
+                  Talk With Our Team
                 </Button>
               </div>
             </GlassCard>

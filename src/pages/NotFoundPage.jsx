@@ -17,15 +17,15 @@ export function NotFoundPage() {
           404
         </h1>
         <h2 className="font-heading text-2xl font-bold text-white mb-3">
-          Agent Node Not Found
+          Page Not Found
         </h2>
         <p className="text-sm text-slate-400 mb-8 font-sans">
-          The requested coordinate does not exist in the Codekrexx mesh. Re-route back to base headquarters.
+          The page you are looking for does not exist or may have moved. Head back to the main page.
         </p>
 
         <Link to="/">
           <Button variant="primary" size="md" icon={ArrowLeft} iconPosition="left">
-            Return to Headquarters
+            Back to Home
           </Button>
         </Link>
       </div>

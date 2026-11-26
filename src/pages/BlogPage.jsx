@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { Navbar } from '../sections/Navbar';
 import { Footer } from '../sections/Footer';
@@ -7,11 +7,9 @@ import { GlassCard } from '../components/GlassCard';
 import { blogPosts } from '../data/blogData';
 
 export function BlogPage() {
-  const navigate = useNavigate();
-
   return (
     <div className="relative min-h-screen bg-[#07070E] text-slate-100">
-      <Navbar onBookConsultation={() => navigate('/#contact')} />
+      <Navbar />
 
       <main className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -24,13 +22,13 @@ export function BlogPage() {
         {/* Page Title */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs font-mono uppercase tracking-widest text-brand-secondary font-semibold mb-2 block">
-            CODEKREXX RESEARCH & INSIGHTS
+            CODEKREXX NOTES & GUIDES
           </span>
           <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-white mb-4">
-            Autonomous Systems, RAG & Automation Engineering.
+            Practical AI & Workflow Automation Guides.
           </h1>
           <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-            Practical architectural insights, benchmarks, and deep dives from our engineers shipping autonomous AI in enterprise environments.
+            Straightforward notes on connecting business tools, designing dependable workflows, and putting AI to work in everyday operations.
           </p>
         </div>
 

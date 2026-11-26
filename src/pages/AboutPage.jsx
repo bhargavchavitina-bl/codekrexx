@@ -12,29 +12,29 @@ export function AboutPage() {
   const principles = [
     {
       icon: Cpu,
-      title: "Action Over Chatter",
-      description: "Chatbots that merely summarize text are obsolete. We engineer autonomous agents that invoke tools, verify inputs, handle exceptions, and complete real-world tasks."
+      title: "Built for Real Work",
+      description: "We don't build tools just for show. Every AI agent and automation is designed to connect with your actual systems and take repetitive work off your team's plate."
     },
     {
       icon: Shield,
-      title: "Zero-Compromise Security",
-      description: "Enterprise data is confidential. We enforce Zero Data Retention (ZDR) endpoints, zero model training on client telemetry, and role-based access governance."
+      title: "Clear Permissions & Control",
+      description: "Your business data stays organised and protected. We build workflows with role-based access and straightforward controls so your team knows how everything runs."
     },
     {
       icon: Target,
-      title: "Measurable ROI Sprints",
-      description: "We don't do endless research projects. Every engagement has a fixed scope, a 2 to 4-week delivery timeline, and a concrete metric of hours or dollars saved."
+      title: "Start Small, Expand Over Time",
+      description: "You don't need to rebuild your operations all at once. We can begin with one time-consuming workflow, get it running reliably, and grow from there."
     },
     {
       icon: Users,
-      title: "Human-in-the-Loop Safeguards",
-      description: "Autonomous execution with intuitive supervisor dashboards, confidence scoring thresholds, and immediate escalation channels when ambiguity arises."
+      title: "Human Review When Needed",
+      description: "Automation shouldn't mean losing oversight. We build approval steps, notifications, and clear handoffs whenever a decision calls for a person."
     }
   ];
 
   return (
     <div className="relative min-h-screen bg-[#07070E] text-slate-100">
-      <Navbar onBookConsultation={() => navigate('/#contact')} />
+      <Navbar />
 
       <main className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
@@ -50,17 +50,17 @@ export function AboutPage() {
             ABOUT CODEKREXX
           </span>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            We are building the autonomous operational backbone for modern enterprise.
+            We build practical automation around the way your business works.
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed font-sans">
-            Founded with a clear conviction: the next decade of software is not about static SaaS dashboards. It is about autonomous agent systems that collaborate with human teams, resolve bottlenecks in milliseconds, and run 24 hours a day without downtime.
+            At Codekrexx, we build AI agents and automated workflows that handle repetitive tasks, connect the tools your team already uses, and keep day-to-day operations running smoothly.
           </p>
         </div>
 
         {/* Core Principles */}
         <div className="mb-20">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-brand-secondary" /> Engineering Principles
+            <Sparkles className="w-6 h-6 text-brand-secondary" /> How We Approach Automation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {principles.map((p, idx) => {
@@ -86,14 +86,14 @@ export function AboutPage() {
         <div className="relative rounded-3xl p-10 sm:p-14 border border-brand-primary/40 bg-gradient-to-r from-brand-primary/20 via-[#100e2b]/90 to-brand-secondary/20 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-2">
-              Want to automate your team's routine workload?
+              Want to simplify your team's routine workload?
             </h3>
             <p className="text-sm text-slate-300 max-w-xl">
-              Let's build an autonomous agent pipeline customized to your databases, tools, and business objectives.
+              Tell us which tasks take up the most time, and we'll help design a workflow tailored to your tools and goals.
             </p>
           </div>
           <Button variant="primary" size="lg" onClick={() => navigate('/#contact')}>
-            Start a Conversation
+            Get Started
           </Button>
         </div>
       </main>

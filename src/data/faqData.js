@@ -1,32 +1,32 @@
 export const faqData = [
   {
-    id: "startup-stage",
-    question: "1. We're a startup. Is AI automation worth investing in at our stage?",
-    answer: "You don't need to be a large company to benefit from automation. If your team spends time on repetitive tasks, managing leads, handling customer queries, or moving data between tools, automation can help you save time and work more efficiently. We focus on solutions that make sense for your current needs and budget."
+    id: "ai-for-business",
+    question: "What can AI actually do for my business?",
+    answer: "AI can take care of many everyday tasks that eat up your time, from answering customer questions and managing enquiries to organising data and handling follow-ups. We help you find the right places to use AI, so it solves real problems instead of adding unnecessary complexity."
   },
   {
-    id: "small-team",
-    question: "2. We have a small team. Can automation actually make a difference?",
-    answer: "Automation is particularly useful for small teams because it helps them handle more work without increasing their workload at every step. We look at the tasks slowing your team down and find practical ways to simplify them."
+    id: "existing-tools-integration",
+    question: "Can you integrate AI with the tools we're already using?",
+    answer: "Yes. You don't have to replace your existing software to start using AI. We can connect AI solutions with your current tools, platforms, and workflows wherever integration is possible, making everything work together more smoothly."
   },
   {
-    id: "start-small",
-    question: "3. Can we start small and expand automation as our startup grows?",
-    answer: "Absolutely. You don't need to automate everything at once. We can start with one workflow that's taking up too much of your time, get it working properly, and gradually expand as your business grows and your needs change."
+    id: "timeline",
+    question: "How long does it take to build an AI solution?",
+    answer: "It depends on what you're looking for. Some automations are fairly simple to set up, while custom AI agents and complex integrations take more time. Once we understand your requirements, we'll give you a realistic timeline and explain what the process looks like."
   },
   {
-    id: "existing-tools",
-    question: "4. Can you work with the tools and software we're already using?",
-    answer: "In most cases, yes. We aim to work with your existing tools wherever possible rather than forcing you to change your entire setup. We'll first understand your current workflow and then determine how everything can be connected."
+    id: "technical-knowledge",
+    question: "Do I need technical knowledge to use your solutions?",
+    answer: "Not at all. We want the technology to make your work easier, not give you something else to figure out. Our solutions are designed to be simple to use, even if you have no experience with AI or automation."
   },
   {
-    id: "where-to-start",
-    question: "5. What if we don't know exactly what we want to automate?",
-    answer: "That's completely fine. Many businesses know that certain tasks are taking too much time but aren't sure how to fix them. We can help identify those areas, suggest possible solutions, and figure out where automation would actually be useful."
+    id: "autonomy-and-control",
+    question: "Can AI work on its own, or will someone need to monitor it?",
+    answer: "AI can handle many tasks on its own, especially repetitive processes with clear instructions. For tasks that require accuracy or important decisions, we can include human approval and review wherever necessary. You stay in control of how much the system does independently."
   },
   {
-    id: "business-control",
-    question: "6. Will we still have control over our business processes after automation?",
-    answer: "Yes. Automation is meant to make your work easier, not take control away from your team. We can design workflows around your requirements, including approval steps, notifications, and situations where a person needs to make the final decision."
+    id: "idea-help",
+    question: "I have an idea but don't know how to turn it into a solution. Can you help?",
+    answer: "Of course. You don't need everything figured out before reaching out. Tell us about your idea, the problem you're facing, or something you'd like to make easier. We'll help you understand what's possible and work out a practical way to build it."
   }
 ];

@@ -73,13 +73,13 @@ export function Contact() {
 
           <div className="max-w-3xl">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-secondary bg-brand-secondary/10 px-3 py-1 rounded-full border border-brand-secondary/30 inline-flex items-center gap-1.5 mb-4">
-              <Sparkles className="w-3 h-3 text-brand-secondary" /> Direct Engineering Access
+              <Sparkles className="w-3 h-3 text-brand-secondary" /> Work With Us
             </span>
             <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight mb-3">
-              Ready to deploy autonomous AI agents on your payroll?
+              Ready to automate the work slowing your team down?
             </h3>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
-              Connect directly with our engineering team to review your workflow, assess API and data integrations, and launch custom autonomous AI solutions with fixed milestones.
+              Tell us about your current workflows, the tools you use, and where manual tasks take up too much time. We'll help map out a practical solution that fits your business.
             </p>
           </div>
         </motion.div>
@@ -87,24 +87,24 @@ export function Contact() {
         {/* Section Heading */}
         <SectionHeading
           badge="GET IN TOUCH"
-          title="Connect with the Codekrexx engineering team."
-          highlight="Codekrexx engineering team"
-          subtitle="Reach out directly via email, connect across our developer community, or explore our enterprise compliance standards."
+          title="Talk with the Codekrexx team."
+          highlight="Codekrexx team"
+          subtitle="Have a workflow in mind or not sure where to begin? Reach out directly by email or connect with us through our channels below."
           align="center"
         />
 
         {/* Contact Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
           
-          {/* Primary Channel: Email & Headquarters */}
+          {/* Primary Channel: Email & Contact Details */}
           <div className="lg:col-span-7 space-y-6">
             <GlassCard className="p-8 sm:p-10 border-brand-primary/20 h-full flex flex-col justify-between">
               <div>
                 <h3 className="font-heading text-2xl font-bold text-white dark:text-white light:text-slate-900 mb-2">
-                  Direct Inquiries & Architecture Review
+                  Direct Inquiries
                 </h3>
                 <p className="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 mb-8 font-sans">
-                  Our principal engineers review all inquiries and respond within 24 business hours.
+                  Share a quick overview of what you're looking to automate or build, and we'll follow up with next steps.
                 </p>
 
                 {/* Direct Email Card */}
@@ -114,7 +114,7 @@ export function Contact() {
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">Official Email</div>
+                      <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">Email</div>
                       <a
                         href={`mailto:${siteConfig.email}`}
                         className="text-lg font-heading font-bold text-white dark:text-white light:text-slate-900 hover:text-brand-secondary transition-colors"
@@ -151,7 +151,7 @@ export function Contact() {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-mono text-slate-400 uppercase">Headquarters</div>
+                      <div className="text-xs font-mono text-slate-400 uppercase">Location</div>
                       <div className="text-sm font-semibold text-white dark:text-white light:text-slate-900 mt-0.5">
                         {siteConfig.location}
                       </div>
@@ -163,7 +163,7 @@ export function Contact() {
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-mono text-slate-400 uppercase">Direct Line</div>
+                      <div className="text-xs font-mono text-slate-400 uppercase">Phone</div>
                       <div className="text-sm font-semibold text-white dark:text-white light:text-slate-900 mt-0.5">
                         {siteConfig.phone}
                       </div>
@@ -172,33 +172,33 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Guarantees */}
+              {/* Practical Highlights */}
               <div className="mt-8 pt-6 border-t border-white/10 dark:border-white/10 light:border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-400">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>100% IP Ownership</span>
+                  <span>Built around your tools</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-secondary shrink-0" />
-                  <span>Zero Data Retention</span>
+                  <span>Human review controls</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-primary-light shrink-0" />
-                  <span>Mutual NDA First</span>
+                  <span>Clear project scope</span>
                 </div>
               </div>
             </GlassCard>
           </div>
 
-          {/* Secondary Channel: Social & Developer Communities */}
+          {/* Secondary Channel: Social Channels */}
           <div className="lg:col-span-5 space-y-6">
             <GlassCard className="p-8 sm:p-10 border-brand-secondary/20 h-full flex flex-col justify-between">
               <div>
                 <h3 className="font-heading text-xl font-bold text-white dark:text-white light:text-slate-900 mb-2">
-                  Developer & Community Channels
+                  Connect With Us
                 </h3>
                 <p className="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 mb-6 font-sans">
-                  Follow our open-source tools, benchmark releases, and engineering updates across the web.
+                  Follow our updates or reach out through any of the platforms below.
                 </p>
 
                 <div className="space-y-3">
@@ -229,13 +229,13 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Service SLA Notice */}
+              {/* Practical Note */}
               <div className="mt-8 p-4 rounded-xl bg-brand-primary/10 border border-brand-primary/20">
                 <div className="text-xs font-mono uppercase text-brand-secondary font-bold mb-1">
-                  Enterprise Support SLA
+                  Not Sure Where to Start?
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                  Dedicated Slack channels and prioritized incident response guaranteed for all production client deployments.
+                  You don't need a technical brief before reaching out. Share the repetitive tasks slowing your team down, and we can explore practical options together.
                 </p>
               </div>
             </GlassCard>

@@ -3,132 +3,132 @@ export const servicesData = [
     id: "ai-agents",
     slug: "ai-agents",
     title: "Autonomous AI Agents",
-    shortDescription: "Self-directed AI agents that reason, plan, use digital tools, and complete multi-step complex business tasks independently.",
+    shortDescription: "AI agents that do more than respond to prompts. They can gather information, work with your tools, handle multi-step tasks, and help your team get things done with less manual effort.",
     iconName: "Bot",
-    badge: "Flagship",
+    badge: "AI Agents",
     color: "from-brand-primary to-brand-accent",
     glowColor: "rgba(124, 58, 237, 0.35)",
     deliverables: [
-      "Custom multi-agent orchestration architecture (Supervisor + Workers)",
-      "Automated tool-calling (REST APIs, SQL databases, email, internal software)",
-      "Persistent memory store (short-term conversational + long-term episodic)",
-      "Human-in-the-loop review dashboards & emergency kill-switches"
+      "Step-by-step task workflows tailored to your business rules",
+      "Direct connections to your emails, forms, spreadsheets, and APIs",
+      "Context memory across conversations and ongoing workflows",
+      "Approval steps and notifications when human review is needed"
     ],
     useCases: [
-      "Autonomous supply chain re-ordering & vendor communications",
-      "Financial risk anomaly detection and automated report generation",
-      "Executive triage & proactive calendar / task orchestration"
+      "Reviewing incoming requests, gathering context, and updating records",
+      "Checking supplier updates and preparing draft orders or messages",
+      "Preparing regular summaries and routing action items to your team"
     ],
-    outcomes: "Reduce human manual touchpoints by up to 85% on structured multi-step tasks."
+    outcomes: "Less manual coordination on multi-step tasks, with clear checkpoints for your team."
   },
   {
     id: "process-automation",
     slug: "process-automation",
     title: "Business Process Automation",
-    shortDescription: "End-to-end operational automation connecting legacy software, modern SaaS tools, databases, and generative models.",
+    shortDescription: "Connect the tools, systems, and tasks your business relies on. We automate repetitive processes so your team spends less time moving information around and more time on meaningful work.",
     iconName: "Cpu",
-    badge: "High ROI",
+    badge: "Workflows",
     color: "from-brand-secondary to-brand-accent",
     glowColor: "rgba(6, 182, 212, 0.35)",
     deliverables: [
-      "Full workflow audit and automation roadmap",
-      "Custom webhook, n8n, and Python microservice pipelines",
-      "Automated PDF document parsing and OCR data extraction",
-      "Real-time sync between CRM, ERP, and accounting engines"
+      "Review of your current workflows to spot time-consuming bottlenecks",
+      "Automated pipelines using n8n, webhooks, and custom Python scripts",
+      "Structured data extraction from forms, PDFs, and everyday documents",
+      "Reliable syncing across your CRM, spreadsheets, and accounting tools"
     ],
     useCases: [
-      "Instant invoice reconciliation against purchase orders",
-      "Automated employee onboarding across 12 SaaS accounts in 90 seconds",
-      "Cross-departmental status reporting compiled automatically every week"
+      "Matching invoices and purchase details across accounting software",
+      "Automating onboarding checklists and internal account setup steps",
+      "Pulling updates from multiple platforms into regular team reports"
     ],
-    outcomes: "Average payback period of under 45 days with 20-30 hours saved per employee each week."
+    outcomes: "Fewer repetitive handoffs and less manual copying between spreadsheets and apps."
   },
   {
     id: "ai-chatbots",
     slug: "ai-chatbots",
-    title: "AI Chatbots & Intelligent Support",
-    shortDescription: "Context-aware conversational agents powered by Retrieval-Augmented Generation (RAG) that resolve support tickets 24/7.",
+    title: "AI Chatbots & Intelligent Assistants",
+    shortDescription: "Give your customers and employees a smarter way to find answers. We build AI assistants that understand context, work with your business information, and help handle questions without making users dig through documents or wait for support.",
     iconName: "MessagesSquare",
-    badge: "24/7 Support",
+    badge: "Assistants",
     color: "from-brand-accent to-brand-primary",
     glowColor: "rgba(59, 130, 246, 0.35)",
     deliverables: [
-      "Vector database embeddings of all documentation, knowledge bases, and tickets",
-      "Omnichannel deployment: Web widget, Slack, WhatsApp, Zendesk, Intercom",
-      "Accurate tone matching and strict guardrails preventing hallucination",
-      "Automated escalation protocols with sentiment analysis"
+      "Assistants grounded in your company guides, FAQs, and documents",
+      "Support across website chat widgets, Slack, email, and messaging apps",
+      "Clear boundaries so answers stay aligned with your actual information",
+      "Smooth handoff to your team whenever a conversation needs a person"
     ],
     useCases: [
-      "Tier-1 and Tier-2 customer inquiry resolution with zero queue time",
-      "Internal IT helpdesk for password resets and software provisioning",
-      "E-commerce order tracking, returns processing, and upsell suggestions"
+      "Answering common customer questions outside regular business hours",
+      "Helping employees quickly find internal guidelines, docs, and SOPs",
+      "Guiding website visitors through service details, enquiries, and tracking"
     ],
-    outcomes: "70%+ instantaneous deflection rate for incoming tickets with 94%+ CSAT scores."
+    outcomes: "Faster, helpful answers for customers and staff without overwhelming your team."
   },
   {
     id: "lead-generation",
     slug: "lead-generation",
     title: "Lead Generation & Sales Automation",
-    shortDescription: "Algorithmic lead qualification, intelligent web scraping, enriched CRM records, and hyper-personalized outbound sequences.",
+    shortDescription: "Spend less time chasing leads manually. From collecting enquiries and qualifying potential customers to follow-ups, we help make your sales process more organised and consistent.",
     iconName: "Zap",
-    badge: "Growth",
+    badge: "Sales",
     color: "from-brand-primary via-brand-accent to-brand-secondary",
     glowColor: "rgba(124, 58, 237, 0.35)",
     deliverables: [
-      "Target account intelligence scraping & verification engines",
-      "Deep personalization algorithms analyzing target news, podcasts, & hiring trends",
-      "Multi-channel automated sequencing across Email, LinkedIn, and CRM",
-      "Dynamic response handler that books discovery calls directly to your calendar"
+      "Organised enquiry capture from website forms, email, and inbound channels",
+      "Lead qualification workflows built around your criteria and services",
+      "Automated CRM updates and consistent follow-up scheduling",
+      "Direct calendar routing so serious prospects can connect smoothly"
     ],
     useCases: [
-      "B2B SaaS outbound targeting qualified tech leaders with relevant messaging",
-      "Real estate broker lead qualification and instant SMS follow-ups",
-      "Recruiting candidate sourcing and automated screening questionnaires"
+      "Responding promptly to new website enquiries with helpful context",
+      "Following up consistently with leads so opportunities aren't missed",
+      "Organising prospect details and background notes before discovery calls"
     ],
-    outcomes: "3.8x increase in qualified outbound meeting rates and 80% reduction in prospecting hours."
+    outcomes: "A cleaner, more consistent sales process where new enquiries don't fall through the cracks."
   },
   {
     id: "ai-webapp-dev",
     slug: "ai-webapp-dev",
     title: "AI Web & App Development",
-    shortDescription: "Bespoke, blazing-fast web and mobile applications with native AI features, generative UI, and intuitive modern interfaces.",
+    shortDescription: "Need more than a standard website or application? We build websites and web apps with AI features that serve a real purpose, from smarter user experiences to automated tasks and personalised functionality.",
     iconName: "Layers",
-    badge: "Full-Stack",
+    badge: "Web & Apps",
     color: "from-brand-secondary to-brand-accent",
     glowColor: "rgba(6, 182, 212, 0.35)",
     deliverables: [
-      "Production-ready React / Next.js / React Native architectures",
-      "Sub-second AI streaming interfaces with optimistic UI updates",
-      "Role-based access control (RBAC), multi-tenancy, and Stripe billing",
-      "Scalable cloud deployment on Vercel, Supabase, or AWS"
+      "Responsive React and Next.js websites and custom web applications",
+      "Practical AI features designed around your product or internal workflow",
+      "User accounts, permissions, and clean dashboards built for daily use",
+      "Maintainable codebases deployed cleanly on your preferred cloud setup"
     ],
     useCases: [
-      "AI-powered SaaS platforms and vertical AI industry copilot software",
-      "Interactive analytics dashboards with natural language query capabilities",
-      "Customer-facing portals with personalized generative content"
+      "Client portals featuring smart search, summaries, and guided actions",
+      "Internal web tools combining forms, approvals, and workflow triggers",
+      "Custom web products offering tailored recommendations or assistance"
     ],
-    outcomes: "Launch 4x faster with modern, maintainable codebases built to scale to millions of users."
+    outcomes: "A modern web app built cleanly around the way your team and customers work."
   },
   {
     id: "data-integrations",
     slug: "data-integrations",
     title: "Data & Enterprise AI Integrations",
-    shortDescription: "Connect frontier LLMs (OpenAI, Gemini, Claude) directly to your proprietary data lakes, APIs, and enterprise systems.",
+    shortDescription: "Your business data shouldn't be scattered across disconnected tools. We help bring your systems together and build AI solutions that can work with your existing data, applications, and workflows.",
     iconName: "Database",
-    badge: "Enterprise",
+    badge: "Integrations",
     color: "from-brand-accent to-brand-primary",
     glowColor: "rgba(59, 130, 246, 0.35)",
     deliverables: [
-      "Enterprise RAG pipeline design with hybrid keyword & semantic search",
-      "Fine-tuned lightweight open-source models for on-premise execution",
-      "Zero-data retention agreements and SOC2-compliant architectures",
-      "Real-time streaming telemetry and LLM cost optimization caching"
+      "Bridges connecting internal documents, databases, and third-party APIs",
+      "Searchable knowledge setups built around your existing records",
+      "Permission controls so teams only access the data meant for them",
+      "Clear error handling and logging so integrations stay dependable"
     ],
     useCases: [
-      "Legal and compliance document audit across 100,000+ contracts",
-      "Unified internal enterprise knowledge search across Notion, Drive, & Jira",
-      "Custom predictive analytics and churn forecasting algorithms"
+      "Finding answers across guides, proposals, and shared project files",
+      "Keeping customer records synced between CRM, billing, and support tools",
+      "Allowing managers to look up operational data using plain questions"
     ],
-    outcomes: "Unlock institutional knowledge trapped in silos while cutting API inference costs by up to 60%."
+    outcomes: "Connected systems and easier access to business data without constant app switching."
   }
 ];

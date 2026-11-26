@@ -1,12 +1,11 @@
 export const siteConfig = {
   name: "Codekrexx",
-  tagline: "Autonomous AI Solutions for Real-World Impact",
-  description: "We build custom AI agents, business process automations, intelligent chatbots, and next-gen AI applications that scale your operations 24/7.",
+  tagline: "AI Agents & Business Automation",
+  description: "We build AI agents and automation systems that take care of repetitive work, connect your business tools, and help your team work more efficiently.",
   foundedYear: 2024,
   email: "hello@codekrexx.com",
   phone: "+1 (555) 329-AI24",
   location: "San Francisco, CA & Remote Worldwide",
-  calendlyUrl: "https://calendly.com",
   navLinks: [
     { name: "Services", href: "#services", id: "services" },
     { name: "How We Work", href: "#how-we-work", id: "how-we-work" },

@@ -47,10 +47,17 @@ export function Services({ onSelectService }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          badge="OUR CAPABILITIES"
-          title="Engineered for autonomous business impact."
-          highlight="autonomous business impact"
-          subtitle="From self-directed multi-agent swarms to custom enterprise LLM integrations, we build systems that take action, eliminate manual work, and scale with your volume."
+          badge="What We Do"
+          title="AI solutions built around the way your business works."
+          highlight="the way your business works."
+          subtitle={
+            <>
+              Every business has tasks that take more time than they should. We help identify those tasks and build AI-powered solutions that make everyday operations easier, faster, and more manageable.
+              <span className="block mt-3">
+                Whether you need a single automated workflow or a complete AI-powered system, we build around your actual requirements.
+              </span>
+            </>
+          }
           align="center"
         />
 
@@ -95,7 +102,7 @@ export function Services({ onSelectService }) {
                         className="overflow-hidden mb-6 pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200"
                       >
                         <h4 className="text-xs font-mono uppercase text-brand-secondary font-semibold mb-2.5">
-                          Key Deliverables:
+                          What's Included:
                         </h4>
                         <div className="space-y-2 mb-4">
                           {service.deliverables.map((item, idx) => (
@@ -106,7 +113,7 @@ export function Services({ onSelectService }) {
                           ))}
                         </div>
                         <div className="p-3 rounded-xl bg-brand-primary/10 border border-brand-primary/30 text-xs text-slate-200">
-                          <span className="font-semibold text-brand-secondary">Target Outcome: </span>
+                          <span className="font-semibold text-brand-secondary">How It Helps: </span>
                           {service.outcomes}
                         </div>
                       </motion.div>
@@ -144,7 +151,7 @@ export function Services({ onSelectService }) {
       <Modal
         isOpen={!!activeModalService}
         onClose={() => setActiveModalService(null)}
-        title={activeModalService?.title || 'Service Architecture'}
+        title={activeModalService?.title || 'Service Details'}
       >
         {activeModalService && (
           <div className="space-y-6">
@@ -156,7 +163,7 @@ export function Services({ onSelectService }) {
             <div>
               <h4 className="text-xs font-mono uppercase text-brand-secondary font-bold tracking-wider mb-3 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" />
-                Enterprise Deliverables
+                What We Build
               </h4>
               <div className="space-y-2.5">
                 {activeModalService.deliverables.map((item, idx) => (
@@ -168,25 +175,25 @@ export function Services({ onSelectService }) {
               </div>
             </div>
 
-            {/* Production Use Cases */}
+            {/* Common Examples */}
             <div>
               <h4 className="text-xs font-mono uppercase text-brand-primary-light font-bold tracking-wider mb-3">
-                Production Use Cases
+                Common Examples
               </h4>
               <div className="grid grid-cols-1 gap-2">
                 {activeModalService.useCases.map((useCase, idx) => (
                   <div key={idx} className="text-xs text-slate-300 dark:text-slate-300 light:text-slate-700 p-3 rounded-xl bg-brand-primary/10 border border-brand-primary/20">
-                    <span className="font-semibold text-brand-secondary">Case 0{idx + 1}: </span>
+                    <span className="font-semibold text-brand-secondary">Example 0{idx + 1}: </span>
                     {useCase}
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Guaranteed Outcome */}
+            {/* Practical Impact */}
             <div className="p-4 rounded-xl bg-gradient-to-r from-brand-primary/20 via-brand-accent/20 to-brand-secondary/20 border border-brand-secondary/30">
               <div className="text-xs font-mono uppercase tracking-wider text-brand-secondary font-bold mb-1">
-                Typical Outcome
+                How It Helps
               </div>
               <div className="text-sm font-semibold text-white">
                 {activeModalService.outcomes}
@@ -205,7 +212,7 @@ export function Services({ onSelectService }) {
                   if (onSelectService) onSelectService(s.title);
                 }}
               >
-                Inquire About {activeModalService.title}
+                Ask About {activeModalService.title}
               </Button>
             </div>
           </div>
