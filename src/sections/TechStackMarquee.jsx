@@ -31,9 +31,9 @@ export function TechStackMarquee() {
   const marqueeItems = [...techStackList, ...techStackList, ...techStackList];
 
   return (
-    <section id="tech-stack" className="py-20 relative overflow-hidden bg-black/40 border-y border-white/5 scroll-mt-20">
+    <section id="tech-stack" className="py-20 relative overflow-hidden bg-[#F6E9C8]/75 dark:bg-black/40 border-y border-[#045EAC]/15 dark:border-white/5 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
-        <span className="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold flex items-center justify-center gap-2">
+        <span className="text-xs font-mono uppercase tracking-widest text-slate-700 dark:text-slate-400 font-semibold flex items-center justify-center gap-2">
           <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
           Tools & Technologies We Work With
         </span>
@@ -47,19 +47,19 @@ export function TechStackMarquee() {
             return (
               <div
                 key={`row1-${index}`}
-                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-brand-secondary/50 transition-all select-none group cursor-pointer"
+                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-[#045EAC]/15 dark:border-white/10 hover:border-brand-secondary/50 transition-all select-none group cursor-pointer"
               >
                 <div
-                  className="p-2 rounded-xl bg-white/5 text-brand-secondary group-hover:scale-110 transition-transform"
+                  className="p-2 rounded-xl bg-[#045EAC]/5 dark:bg-white/5 text-brand-secondary group-hover:scale-110 transition-transform"
                   style={{ color: tech.color }}
                 >
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-heading font-bold text-white dark:text-white light:text-slate-900 whitespace-nowrap">
+                  <div className="text-sm font-heading font-bold text-[#0B1B2E] dark:text-white whitespace-nowrap">
                     {tech.name}
                   </div>
-                  <div className="text-[10px] font-mono text-slate-400 whitespace-nowrap">
+                  <div className="text-[10px] font-mono text-slate-600 dark:text-slate-400 whitespace-nowrap">
                     {tech.category}
                   </div>
                 </div>
@@ -77,19 +77,19 @@ export function TechStackMarquee() {
             return (
               <div
                 key={`row2-${index}`}
-                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-white/10 dark:border-white/10 light:border-slate-200 hover:border-brand-primary/50 transition-all select-none group cursor-pointer"
+                className="flex items-center gap-3 px-5 py-3 rounded-2xl glass-card border-[#045EAC]/15 dark:border-white/10 hover:border-brand-primary/50 transition-all select-none group cursor-pointer"
               >
                 <div
-                  className="p-2 rounded-xl bg-white/5 text-brand-primary group-hover:scale-110 transition-transform"
+                  className="p-2 rounded-xl bg-[#045EAC]/5 dark:bg-white/5 text-brand-primary group-hover:scale-110 transition-transform"
                   style={{ color: tech.color }}
                 >
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-heading font-bold text-white dark:text-white light:text-slate-900 whitespace-nowrap">
+                  <div className="text-sm font-heading font-bold text-[#0B1B2E] dark:text-white whitespace-nowrap">
                     {tech.name}
                   </div>
-                  <div className="text-[10px] font-mono text-slate-400 whitespace-nowrap">
+                  <div className="text-[10px] font-mono text-slate-600 dark:text-slate-400 whitespace-nowrap">
                     {tech.category}
                   </div>
                 </div>

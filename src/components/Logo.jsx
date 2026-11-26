@@ -1,54 +1,59 @@
 import React from 'react';
+import codekrexxMark from '../assets/codekrexx-mark.png';
+import codekrexxLogo from '../assets/codekrexx-logo.png';
 
-export function Logo({ className = "h-9", showText = true }) {
-  return (
-    <div className={`flex items-center gap-3 select-none group cursor-pointer ${className}`}>
-      {/* SVG Icon Mark */}
-      <div className="relative w-9 h-9 flex items-center justify-center">
-        {/* Ambient Glow */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED] via-[#3B82F6] to-[#06B6D4] rounded-xl blur-[6px] opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        {/* Core Icon Container */}
-        <div className="relative w-full h-full bg-[#07070E] border border-white/20 rounded-xl flex items-center justify-center p-1.5 shadow-inner">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <defs>
-              <linearGradient id="logo-brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#7C3AED" />
-                <stop offset="50%" stopColor="#3B82F6" />
-                <stop offset="100%" stopColor="#06B6D4" />
-              </linearGradient>
-            </defs>
-            {/* Hexagonal agent node lattice */}
-            <polygon 
-              points="20,4 34,12 34,28 20,36 6,28 6,12" 
-              stroke="url(#logo-brand-grad)" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              className="opacity-40"
-            />
-            {/* Dynamic K Glyph */}
-            <path 
-              d="M14 11V29 M14 20L26 11 M19 16L27 29" 
-              stroke="url(#logo-brand-grad)" 
-              strokeWidth="3.2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-            />
-            {/* Active AI Nodes */}
-            <circle cx="26" cy="11" r="2.2" fill="#06B6D4" className="animate-pulse" />
-            <circle cx="27" cy="29" r="2.2" fill="#3B82F6" />
-            <circle cx="14" cy="20" r="2" fill="#FFFFFF" />
-          </svg>
+export function Logo({ className = '', variant = 'inline', showText = true }) {
+  if (variant === 'full') {
+    return (
+      <div className={`inline-flex flex-col items-start select-none group cursor-pointer ${className}`}>
+        {/* Exact brand logo on light / warm cream background */}
+        <img
+          src={codekrexxLogo}
+          alt="Codekrexx - AI Automation"
+          className="h-24 w-auto object-contain dark:hidden"
+        />
+
+        {/* High-contrast dark-mode equivalent */}
+        <div className="hidden dark:flex flex-col items-center">
+          <img
+            src={codekrexxMark}
+            alt="Codekrexx"
+            className="h-14 w-auto object-contain mb-1.5 drop-shadow-[0_0_10px_rgba(8,163,255,0.25)]"
+          />
+          <span className="font-heading font-extrabold text-2xl tracking-tight leading-none">
+            <span className="text-[#60A5FA]">code</span>
+            <span className="text-[#08A3FF]">krexx</span>
+          </span>
+          <div className="flex items-center gap-2 mt-1.5">
+            <span className="w-5 h-[1px] bg-slate-400/70" />
+            <span className="text-[10px] font-sans font-medium tracking-[0.14em] text-slate-300">
+              AI Automation
+            </span>
+            <span className="w-5 h-[1px] bg-slate-400/70" />
+          </div>
         </div>
       </div>
+    );
+  }
 
-      {/* Brand Typography */}
+  return (
+    <div className={`flex items-center gap-2.5 select-none group cursor-pointer ${className}`}>
+      <img
+        src={codekrexxMark}
+        alt="Codekrexx"
+        className="h-9 w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-105"
+      />
+
       {showText && (
-        <span className="font-heading font-extrabold text-xl tracking-tight text-white dark:text-white light:text-slate-900 flex items-baseline">
-          Code<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-[#3B82F6] to-[#06B6D4]">krexx</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#06B6D4] ml-0.5 animate-pulse inline-block" />
-        </span>
+        <div className="flex flex-col leading-none">
+          <span className="font-heading font-extrabold text-xl tracking-tight flex items-baseline">
+            <span className="text-[#045EAC] dark:text-[#60A5FA]">code</span>
+            <span className="text-[#08A3FF]">krexx</span>
+          </span>
+          <span className="text-[9px] font-sans font-semibold tracking-[0.16em] uppercase text-[#045EAC]/80 dark:text-slate-300 mt-0.5">
+            AI Automation
+          </span>
+        </div>
       )}
     </div>
   );

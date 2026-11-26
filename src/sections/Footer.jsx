@@ -36,18 +36,18 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#05050A] border-t border-white/10 dark:border-white/10 light:border-slate-200 pt-14 pb-10 overflow-hidden">
+    <footer className="relative bg-[#F6E8C7] dark:bg-[#050811] border-t border-[#045EAC]/15 dark:border-white/10 pt-14 pb-10 overflow-hidden">
       {/* Subtle top brand ambient line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-brand-secondary/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-10 border-b border-white/10 dark:border-white/10 light:border-slate-200">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-10 border-b border-[#045EAC]/15 dark:border-white/10">
           {/* Brand Info & Summary */}
           <div className="space-y-4 max-w-md">
             <a href="#" className="inline-block" aria-label="Codekrexx Home">
-              <Logo />
+              <Logo variant="full" />
             </a>
-            <p className="text-sm text-slate-400 leading-relaxed font-sans">
+            <p className="text-sm text-slate-700 dark:text-slate-400 leading-relaxed font-sans">
               Codekrexx builds practical AI agents, automated workflows, and custom integrations that simplify everyday business operations.
             </p>
           </div>
@@ -60,7 +60,7 @@ export function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-brand-secondary hover:border-brand-secondary/40 transition-all cursor-pointer"
+                className="p-2.5 rounded-xl bg-white/80 dark:bg-white/5 border border-[#045EAC]/15 dark:border-white/10 text-[#045EAC] dark:text-slate-400 hover:text-brand-secondary dark:hover:text-brand-secondary hover:border-brand-secondary/50 transition-all cursor-pointer shadow-sm"
                 aria-label={`Codekrexx on ${social.name}`}
               >
                 <SocialIcon name={social.name} />
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600 dark:text-slate-500 font-mono">
           <div>
             &copy; {CURRENT_YEAR} {siteConfig.name}. All rights reserved.
           </div>
@@ -79,7 +79,7 @@ export function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="p-2 rounded-xl bg-white/5 hover:bg-brand-secondary/20 text-slate-400 hover:text-brand-secondary transition-all border border-white/10 hover:border-brand-secondary/40 cursor-pointer"
+            className="p-2 rounded-xl bg-white/80 dark:bg-white/5 hover:bg-[#08A3FF]/15 dark:hover:bg-brand-secondary/20 text-[#045EAC] dark:text-slate-400 hover:text-[#045EAC] dark:hover:text-brand-secondary transition-all border border-[#045EAC]/15 dark:border-white/10 hover:border-brand-secondary/40 cursor-pointer shadow-sm"
             aria-label="Back to top of page"
             title="Back to top"
           >

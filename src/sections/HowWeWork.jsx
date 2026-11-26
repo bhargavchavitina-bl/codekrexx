@@ -42,10 +42,10 @@ export function HowWeWork() {
         <div className="relative max-w-4xl mx-auto mt-12">
           
           {/* Vertical Connecting Central Line (Desktop) */}
-          <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-[2px] -translate-x-1/2 bg-white/10 dark:bg-white/10 light:bg-slate-200">
+          <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-[2px] -translate-x-1/2 bg-[#045EAC]/15 dark:bg-white/10">
             <motion.div
               style={{ scaleY: lineHeight }}
-              className="w-full h-full origin-top bg-gradient-to-b from-brand-secondary via-brand-accent to-brand-primary shadow-brand-secondary"
+              className="w-full h-full origin-top bg-gradient-to-b from-brand-secondary via-brand-accent to-brand-primary"
             />
           </div>
 
@@ -70,31 +70,31 @@ export function HowWeWork() {
                       viewport={{ once: true, margin: '-60px' }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
-                      <GlassCard className="p-7 border-brand-primary/20 group hover:border-brand-secondary/40">
+                      <GlassCard className="p-7 border-[#045EAC]/15 dark:border-brand-primary/20 group hover:border-brand-secondary/40">
                         {/* Header Tag & Step Number */}
                         <div className="flex items-center justify-between mb-4">
-                          <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-secondary bg-brand-secondary/10 px-3 py-1 rounded-full border border-brand-secondary/30">
+                          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#045EAC] dark:text-brand-secondary bg-[#08A3FF]/10 px-3 py-1 rounded-full border border-[#08A3FF]/30">
                             {step.tag}
                           </span>
-                          <span className="text-2xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary">
+                          <span className="text-2xl font-heading font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#045EAC] via-[#0B78D6] to-[#08A3FF] dark:from-[#60A5FA] dark:via-[#08A3FF] dark:to-[#3CB6FF]">
                             {step.step}
                           </span>
                         </div>
 
                         {/* Title */}
-                        <h3 className="font-heading text-xl font-bold text-white dark:text-white light:text-slate-900 mb-3 leading-snug">
+                        <h3 className="font-heading text-xl font-bold text-[#0B1B2E] dark:text-white mb-3 leading-snug">
                           {step.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed mb-5 font-sans">
+                        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 font-sans">
                           {step.description}
                         </p>
 
                         {/* Bullet Points */}
-                        <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-2.5">
+                        <div className="pt-4 border-t border-[#045EAC]/10 dark:border-white/10 space-y-2.5">
                           {step.bulletPoints.map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300 dark:text-slate-300 light:text-slate-700 leading-normal">
+                            <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300 leading-normal">
                               <CheckCircle2 className="w-4 h-4 text-brand-secondary shrink-0 mt-0.5" />
                               <span>{item}</span>
                             </div>
@@ -105,8 +105,8 @@ export function HowWeWork() {
                   </div>
 
                   {/* Center Node Circle */}
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-[#090a16] border border-brand-secondary/40 items-center justify-center shadow-brand-secondary z-20">
-                    <Icon className="w-5 h-5 text-brand-secondary" />
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-[#FFFDF7] dark:bg-[#091222] border border-[#08A3FF]/45 items-center justify-center shadow-glass z-20">
+                    <Icon className="w-5 h-5 text-[#045EAC] dark:text-brand-secondary" />
                   </div>
 
                   {/* Empty side for layout balance */}

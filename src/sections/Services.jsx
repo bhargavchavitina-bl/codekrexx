@@ -70,7 +70,7 @@ export function Services({ onSelectService }) {
             return (
               <GlassCard
                 key={service.id}
-                className="p-7 flex flex-col justify-between group transition-all duration-300 border-white/10 dark:border-white/10 light:border-slate-200"
+                className="p-7 flex flex-col justify-between group transition-all duration-300 border-[#045EAC]/15 dark:border-white/10"
               >
                 <div>
                   {/* Top Badge & Icon */}
@@ -78,16 +78,16 @@ export function Services({ onSelectService }) {
                     <div className={`p-3.5 rounded-2xl bg-gradient-to-tr ${service.color} text-white shadow-md`}>
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/5 dark:bg-white/5 light:bg-slate-200 border border-white/10 dark:border-white/10 light:border-slate-300 text-slate-300 dark:text-slate-300 light:text-slate-700">
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[#045EAC]/10 dark:bg-white/5 border border-[#045EAC]/20 dark:border-white/10 text-[#045EAC] dark:text-slate-300">
                       {service.badge}
                     </span>
                   </div>
 
                   {/* Title & Short Description */}
-                  <h3 className="font-heading text-xl font-bold text-white dark:text-white light:text-slate-900 mb-3 group-hover:text-brand-secondary transition-colors">
+                  <h3 className="font-heading text-xl font-bold text-[#0B1B2E] dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-brand-secondary transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed mb-6 font-sans">
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-sans">
                     {service.shortDescription}
                   </p>
 
@@ -99,21 +99,21 @@ export function Services({ onSelectService }) {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="overflow-hidden mb-6 pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200"
+                        className="overflow-hidden mb-6 pt-4 border-t border-[#045EAC]/10 dark:border-white/10"
                       >
-                        <h4 className="text-xs font-mono uppercase text-brand-secondary font-semibold mb-2.5">
+                        <h4 className="text-xs font-mono uppercase text-[#045EAC] dark:text-brand-secondary font-semibold mb-2.5">
                           What's Included:
                         </h4>
                         <div className="space-y-2 mb-4">
                           {service.deliverables.map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-700">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-brand-primary-light shrink-0 mt-0.5" />
+                            <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-brand-secondary shrink-0 mt-0.5" />
                               <span>{item}</span>
                             </div>
                           ))}
                         </div>
-                        <div className="p-3 rounded-xl bg-brand-primary/10 border border-brand-primary/30 text-xs text-slate-200">
-                          <span className="font-semibold text-brand-secondary">How It Helps: </span>
+                        <div className="p-3 rounded-xl bg-[#08A3FF]/10 border border-[#08A3FF]/25 text-xs text-slate-800 dark:text-slate-200">
+                          <span className="font-semibold text-[#045EAC] dark:text-brand-secondary">How It Helps: </span>
                           {service.outcomes}
                         </div>
                       </motion.div>
@@ -122,11 +122,11 @@ export function Services({ onSelectService }) {
                 </div>
 
                 {/* Bottom Actions */}
-                <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 flex items-center justify-between">
+                <div className="pt-4 border-t border-[#045EAC]/10 dark:border-white/10 flex items-center justify-between">
                   <button
                     type="button"
                     onClick={() => toggleCard(service.id)}
-                    className="text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-brand-secondary flex items-center gap-1 transition-colors cursor-pointer"
+                    className="text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-[#045EAC] dark:hover:text-brand-secondary flex items-center gap-1 transition-colors cursor-pointer"
                   >
                     <span>{isExpanded ? 'Show Less' : 'Expand Details'}</span>
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
@@ -135,7 +135,7 @@ export function Services({ onSelectService }) {
                   <button
                     type="button"
                     onClick={() => setActiveModalService(service)}
-                    className="text-xs font-semibold text-brand-accent-light hover:text-brand-secondary flex items-center gap-1 transition-colors font-mono cursor-pointer"
+                    className="text-xs font-semibold text-[#045EAC] dark:text-brand-accent-light hover:text-brand-secondary flex items-center gap-1 transition-colors font-mono cursor-pointer"
                   >
                     <span>Full Spec</span>
                     <ExternalLink className="w-3 h-3" />
@@ -155,20 +155,20 @@ export function Services({ onSelectService }) {
       >
         {activeModalService && (
           <div className="space-y-6">
-            <p className="text-slate-300 dark:text-slate-300 light:text-slate-700 text-sm leading-relaxed">
+            <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
               {activeModalService.shortDescription}
             </p>
 
             {/* Deliverables List */}
             <div>
-              <h4 className="text-xs font-mono uppercase text-brand-secondary font-bold tracking-wider mb-3 flex items-center gap-2">
-                <Sparkles className="w-4 h-4" />
+              <h4 className="text-xs font-mono uppercase text-[#045EAC] dark:text-brand-secondary font-bold tracking-wider mb-3 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-brand-secondary" />
                 What We Build
               </h4>
               <div className="space-y-2.5">
                 {activeModalService.deliverables.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-sm text-slate-200 dark:text-slate-200 light:text-slate-800 p-2.5 rounded-xl bg-white/5 dark:bg-white/5 light:bg-slate-100 border border-white/5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-2.5 text-sm text-slate-800 dark:text-slate-200 p-2.5 rounded-xl bg-[#FDF3DA]/60 dark:bg-white/5 border border-[#045EAC]/10 dark:border-white/5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -177,13 +177,13 @@ export function Services({ onSelectService }) {
 
             {/* Common Examples */}
             <div>
-              <h4 className="text-xs font-mono uppercase text-brand-primary-light font-bold tracking-wider mb-3">
+              <h4 className="text-xs font-mono uppercase text-[#045EAC] dark:text-brand-accent-light font-bold tracking-wider mb-3">
                 Common Examples
               </h4>
               <div className="grid grid-cols-1 gap-2">
                 {activeModalService.useCases.map((useCase, idx) => (
-                  <div key={idx} className="text-xs text-slate-300 dark:text-slate-300 light:text-slate-700 p-3 rounded-xl bg-brand-primary/10 border border-brand-primary/20">
-                    <span className="font-semibold text-brand-secondary">Example 0{idx + 1}: </span>
+                  <div key={idx} className="text-xs text-slate-700 dark:text-slate-300 p-3 rounded-xl bg-[#08A3FF]/10 border border-[#08A3FF]/25">
+                    <span className="font-semibold text-[#045EAC] dark:text-brand-secondary">Example 0{idx + 1}: </span>
                     {useCase}
                   </div>
                 ))}
@@ -191,17 +191,17 @@ export function Services({ onSelectService }) {
             </div>
 
             {/* Practical Impact */}
-            <div className="p-4 rounded-xl bg-gradient-to-r from-brand-primary/20 via-brand-accent/20 to-brand-secondary/20 border border-brand-secondary/30">
-              <div className="text-xs font-mono uppercase tracking-wider text-brand-secondary font-bold mb-1">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-[#045EAC]/10 via-[#0B78D6]/10 to-[#08A3FF]/15 border border-[#08A3FF]/30">
+              <div className="text-xs font-mono uppercase tracking-wider text-[#045EAC] dark:text-brand-secondary font-bold mb-1">
                 How It Helps
               </div>
-              <div className="text-sm font-semibold text-white">
+              <div className="text-sm font-semibold text-[#0B1B2E] dark:text-white">
                 {activeModalService.outcomes}
               </div>
             </div>
 
             {/* Modal CTA */}
-            <div className="flex justify-end gap-3 pt-4 border-t border-white/10">
+            <div className="flex justify-end gap-3 pt-4 border-t border-[#045EAC]/15 dark:border-white/10">
               <Button
                 variant="primary"
                 size="md"

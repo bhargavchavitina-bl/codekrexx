@@ -33,8 +33,8 @@ export function FAQ() {
             return (
               <GlassCard
                 key={item.id}
-                className={`transition-all duration-300 border-white/10 dark:border-white/10 light:border-slate-200 overflow-hidden ${
-                  isOpen ? 'border-brand-secondary/40 shadow-brand-secondary' : ''
+                className={`transition-all duration-300 border-[#045EAC]/15 dark:border-white/10 overflow-hidden ${
+                  isOpen ? 'border-brand-secondary/50 shadow-glass' : ''
                 }`}
               >
                 <button
@@ -43,14 +43,14 @@ export function FAQ() {
                   aria-expanded={isOpen}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                 >
-                  <span className="font-heading text-base sm:text-lg font-bold text-white dark:text-white light:text-slate-900">
+                  <span className="font-heading text-base sm:text-lg font-bold text-[#0B1B2E] dark:text-white">
                     {item.question}
                   </span>
                   <div
                     className={`p-2 rounded-xl transition-all duration-300 shrink-0 ${
                       isOpen
-                        ? 'bg-brand-secondary/20 text-brand-secondary rotate-180'
-                        : 'bg-white/5 text-slate-400'
+                        ? 'bg-[#08A3FF]/15 text-[#045EAC] dark:text-brand-secondary rotate-180'
+                        : 'bg-[#045EAC]/10 dark:bg-white/5 text-slate-600 dark:text-slate-400'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -66,7 +66,7 @@ export function FAQ() {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-300 dark:text-slate-300 light:text-slate-700 leading-relaxed font-sans border-t border-white/5 dark:border-white/5 light:border-slate-100">
+                      <div className="px-6 pb-6 pt-3 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed font-sans border-t border-[#045EAC]/10 dark:border-white/5">
                         {item.answer}
                       </div>
                     </motion.div>

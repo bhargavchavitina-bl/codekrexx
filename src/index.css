@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --bg-primary: #07070e;
-    --bg-card: rgba(15, 15, 26, 0.75);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --text-primary: #f8fafc;
-    --text-muted: #94a3b8;
+  :root,
+  html.light {
+    --bg-primary: #FDF3DA;
+    --bg-card: rgba(255, 253, 247, 0.92);
+    --border-color: rgba(4, 94, 172, 0.14);
+    --text-primary: #0B1B2E;
+    --text-muted: #475569;
 
-    /* Codekrexx Brand Palette */
-    --brand-primary: #7c3aed;   /* Electric Violet */
-    --brand-secondary: #06b6d4; /* Cyber Cyan */
-    --brand-accent: #3b82f6;    /* Electric Blue */
+    /* Codekrexx Logo Palette */
+    --brand-primary: #045EAC;   /* Deep Royal Blue */
+    --brand-secondary: #08A3FF; /* Bright Sky Blue */
+    --brand-accent: #0B78D6;    /* Cobalt Blue */
   }
 
-  html.light {
-    --bg-primary: #f8fafc;
-    --bg-card: rgba(255, 255, 255, 0.9);
-    --border-color: rgba(0, 0, 0, 0.08);
-    --text-primary: #0f172a;
-    --text-muted: #64748b;
+  html.dark {
+    --bg-primary: #070C17;
+    --bg-card: rgba(13, 22, 38, 0.80);
+    --border-color: rgba(255, 255, 255, 0.09);
+    --text-primary: #F8FAFC;
+    --text-muted: #94A3B8;
   }
 
   body {
@@ -29,25 +30,28 @@
     color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
-    cursor: default; /* Normal system cursor everywhere */
+    cursor: default;
   }
 
-  /* Custom Modern Scrollbar */
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #07070e;
+    background: #F5E7C6;
   }
-  html.light ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+  html.dark ::-webkit-scrollbar-track {
+    background: #070C17;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e1b4b;
+    background: #9CC5EA;
     border-radius: 9999px;
     border: 2px solid transparent;
     background-clip: padding-box;
+  }
+  html.dark ::-webkit-scrollbar-thumb {
+    background: #163052;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: var(--brand-primary);
@@ -55,7 +59,7 @@
 }
 
 @layer utilities {
-  /* Futuristic Gradient Text from Brand Palette */
+  /* Brand Gradient Text */
   .text-gradient {
     background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-accent) 50%, var(--brand-secondary) 100%);
     -webkit-background-clip: text;
@@ -69,53 +73,53 @@
   }
 
   .text-gradient-primary {
-    background: linear-gradient(135deg, #a78bfa 0%, var(--brand-primary) 60%, var(--brand-accent) 100%);
+    background: linear-gradient(135deg, #045EAC 0%, var(--brand-accent) 60%, #08A3FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   /* Glassmorphism Classes */
   .glass-card {
-    background: rgba(14, 15, 27, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background: rgba(255, 253, 247, 0.90);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(4, 94, 172, 0.14);
+    box-shadow: 0 8px 28px rgba(4, 42, 82, 0.06);
   }
 
-  html.light .glass-card {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  html.dark .glass-card {
+    background: rgba(13, 22, 38, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
   }
 
-  /* Cyber Grid Background */
+  /* Subtle Grid Background */
   .bg-grid-pattern {
     background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(4, 94, 172, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(4, 94, 172, 0.045) 1px, transparent 1px);
+  }
+
+  html.dark .bg-grid-pattern {
     background-image: 
       linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
 
-  html.light .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  }
-
-  /* Glow accents */
+  /* Soft Glow Accents */
   .glow-orb {
     filter: blur(95px);
     pointer-events: none;
     position: absolute;
     border-radius: 9999px;
-    opacity: 0.22;
-    mix-blend-mode: screen;
+    opacity: 0.14;
+    mix-blend-mode: multiply;
   }
 
-  html.light .glow-orb {
-    opacity: 0.12;
-    mix-blend-mode: multiply;
+  html.dark .glow-orb {
+    opacity: 0.20;
+    mix-blend-mode: screen;
   }
 }
 

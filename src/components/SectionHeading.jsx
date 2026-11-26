@@ -8,7 +8,7 @@ export function SectionHeading({
   subtitle,
   align = 'center',
   className = '',
-  badgeColor = 'from-brand-primary/20 to-brand-secondary/20 text-brand-secondary border-brand-secondary/30',
+  badgeColor = 'from-brand-primary/10 to-brand-secondary/15 text-brand-primary dark:text-brand-secondary border-brand-primary/20 dark:border-brand-secondary/30',
 }) {
   const isCenter = align === 'center';
 
@@ -34,12 +34,12 @@ export function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white dark:text-white light:text-slate-900 leading-[1.15]"
+        className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0B1B2E] dark:text-white leading-[1.15]"
       >
         {highlight ? (
           <>
             {title.split(highlight)[0]}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#045EAC] via-[#0B78D6] to-[#08A3FF] dark:from-[#60A5FA] dark:via-[#08A3FF] dark:to-[#3CB6FF]">
               {highlight}
             </span>
             {title.split(highlight)[1]}
@@ -56,7 +56,7 @@ export function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`mt-4 text-base sm:text-lg text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed font-sans ${
+          className={`mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-sans ${
             isCenter ? 'max-w-2xl mx-auto' : ''
           }`}
         >

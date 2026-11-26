@@ -12,10 +12,10 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ defa
 
 function PageLoader() {
   return (
-    <div className="min-h-screen bg-[#07070E] flex items-center justify-center">
+    <div className="min-h-screen bg-[#FDF3DA] dark:bg-[#070C17] flex items-center justify-center">
       <div className="flex flex-col items-center gap-3">
         <div className="w-10 h-10 rounded-full border-2 border-brand-primary border-t-brand-secondary animate-spin shadow-brand-secondary" />
-        <span className="text-xs font-mono text-slate-400">Loading Codekrexx...</span>
+        <span className="text-xs font-mono text-slate-600 dark:text-slate-400">Loading Codekrexx...</span>
       </div>
     </div>
   );

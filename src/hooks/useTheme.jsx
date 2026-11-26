@@ -1,20 +1,22 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
-  isDark: true,
+  isDark: false,
   toggleTheme: () => {},
 });
+
+const THEME_STORAGE_KEY = 'codekrexx-theme-v2';
 
 export function ThemeProvider({ children }) {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('codekrexx-theme');
+      const saved = localStorage.getItem(THEME_STORAGE_KEY);
       if (saved) {
         return saved === 'dark';
       }
-      return true; // Dark mode by default
+      return false; // Warm Cream light mode by default matching Codekrexx logo
     }
-    return true;
+    return false;
   });
 
   useEffect(() => {
@@ -22,11 +24,11 @@ export function ThemeProvider({ children }) {
     if (isDark) {
       root.classList.add('dark');
       root.classList.remove('light');
-      localStorage.setItem('codekrexx-theme', 'dark');
+      localStorage.setItem(THEME_STORAGE_KEY, 'dark');
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
-      localStorage.setItem('codekrexx-theme', 'light');
+      localStorage.setItem(THEME_STORAGE_KEY, 'light');
     }
   }, [isDark]);
 

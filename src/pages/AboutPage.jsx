@@ -33,47 +33,47 @@ export function AboutPage() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-[#07070E] text-slate-100">
+    <div className="relative min-h-screen bg-[#FDF3DA] dark:bg-[#070C17] text-[#0B1B2E] dark:text-slate-100">
       <Navbar />
 
       <main className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-brand-secondary hover:text-brand-secondary-light transition-colors mb-6"
+          className="inline-flex items-center gap-2 text-xs font-mono text-[#045EAC] dark:text-brand-secondary hover:text-brand-secondary transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Home
         </Link>
 
         {/* Hero Section */}
         <div className="max-w-4xl mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-brand-secondary font-semibold mb-2 block">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#045EAC] dark:text-brand-secondary font-semibold mb-2 block">
             ABOUT CODEKREXX
           </span>
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#0B1B2E] dark:text-white mb-6 leading-tight">
             We build practical automation around the way your business works.
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed font-sans">
+          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
             At Codekrexx, we build AI agents and automated workflows that handle repetitive tasks, connect the tools your team already uses, and keep day-to-day operations running smoothly.
           </p>
         </div>
 
         {/* Core Principles */}
         <div className="mb-20">
-          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-2">
+          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#0B1B2E] dark:text-white mb-8 flex items-center gap-2">
             <Sparkles className="w-6 h-6 text-brand-secondary" /> How We Approach Automation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {principles.map((p, idx) => {
               const Icon = p.icon;
               return (
-                <GlassCard key={idx} className="p-8 border-brand-primary/20">
+                <GlassCard key={idx} className="p-8 border-[#045EAC]/15 dark:border-brand-primary/20">
                   <div className="p-3.5 rounded-2xl bg-gradient-to-tr from-brand-primary to-brand-secondary text-white w-fit mb-5 shadow-md">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-heading text-xl font-bold text-white mb-2">
+                  <h3 className="font-heading text-xl font-bold text-[#0B1B2E] dark:text-white mb-2">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                     {p.description}
                   </p>
                 </GlassCard>
@@ -83,12 +83,12 @@ export function AboutPage() {
         </div>
 
         {/* Mission Banner */}
-        <div className="relative rounded-3xl p-10 sm:p-14 border border-brand-primary/40 bg-gradient-to-r from-brand-primary/20 via-[#100e2b]/90 to-brand-secondary/20 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="relative rounded-3xl p-10 sm:p-14 border border-[#045EAC]/20 dark:border-brand-secondary/30 bg-gradient-to-r from-[#045EAC]/10 via-[#FFFDF7] to-[#08A3FF]/15 dark:from-brand-primary/20 dark:via-[#0B1628]/95 dark:to-brand-secondary/20 shadow-glass flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-2">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#0B1B2E] dark:text-white mb-2">
               Want to simplify your team's routine workload?
             </h3>
-            <p className="text-sm text-slate-300 max-w-xl">
+            <p className="text-sm text-slate-700 dark:text-slate-300 max-w-xl">
               Tell us which tasks take up the most time, and we'll help design a workflow tailored to your tools and goals.
             </p>
           </div>

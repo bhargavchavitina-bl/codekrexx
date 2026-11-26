@@ -26,15 +26,15 @@ export function Button({
     primary:
       'relative overflow-hidden text-white bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary hover:brightness-110 shadow-brand-primary hover:shadow-brand-secondary border border-white/20 active:scale-[0.98]',
     secondary:
-      'bg-slate-900/80 dark:bg-slate-900/80 light:bg-white text-slate-100 dark:text-slate-100 light:text-slate-900 border border-slate-700/60 dark:border-white/10 light:border-slate-300 hover:border-brand-primary/50 hover:bg-slate-800/90 shadow-md backdrop-blur-md active:scale-[0.98]',
+      'bg-white/85 dark:bg-slate-900/80 text-[#0B1B2E] dark:text-slate-100 border border-[#045EAC]/20 dark:border-white/10 hover:border-brand-secondary/60 hover:bg-white dark:hover:bg-slate-800/90 shadow-sm backdrop-blur-md active:scale-[0.98]',
     outline:
-      'bg-transparent text-slate-200 dark:text-slate-200 light:text-slate-800 border border-slate-700 dark:border-white/20 light:border-slate-300 hover:border-brand-secondary hover:text-brand-secondary hover:bg-brand-secondary/10 active:scale-[0.98]',
+      'bg-transparent text-[#045EAC] dark:text-slate-200 border border-[#045EAC]/30 dark:border-white/20 hover:border-brand-secondary hover:text-brand-secondary hover:bg-brand-secondary/10 active:scale-[0.98]',
     ghost:
-      'bg-transparent text-slate-300 hover:text-white dark:hover:text-white light:text-slate-700 light:hover:text-slate-950 hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-slate-100 active:scale-[0.98]',
+      'bg-transparent text-slate-700 dark:text-slate-300 hover:text-[#045EAC] dark:hover:text-white hover:bg-[#045EAC]/5 dark:hover:bg-white/5 active:scale-[0.98]',
   };
 
   const baseClasses =
-    'inline-flex items-center justify-center font-heading tracking-wide transition-all duration-300 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 focus:ring-offset-[#07070E] disabled:opacity-50 disabled:pointer-events-none';
+    'inline-flex items-center justify-center font-heading tracking-wide transition-all duration-300 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:ring-offset-2 focus:ring-offset-[#FDF3DA] dark:focus:ring-offset-[#070C17] disabled:opacity-50 disabled:pointer-events-none';
 
   const combinedClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 

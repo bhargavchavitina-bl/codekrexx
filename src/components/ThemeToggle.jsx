@@ -12,7 +12,7 @@ export function ThemeToggle({ className = '' }) {
       onClick={toggleTheme}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.92 }}
-      className={`relative p-2 rounded-xl border border-slate-700/60 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-brand-secondary dark:hover:text-brand-secondary light:hover:text-brand-primary transition-colors backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-brand-primary ${className}`}
+      className={`relative p-2 rounded-xl border border-[#045EAC]/20 dark:border-white/10 bg-white/80 dark:bg-slate-900/60 text-[#045EAC] dark:text-slate-300 hover:text-brand-secondary dark:hover:text-brand-secondary hover:border-brand-secondary/50 transition-colors backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-brand-secondary ${className}`}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >

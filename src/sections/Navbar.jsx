@@ -33,7 +33,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'py-3.5 bg-[#07070E]/90 dark:bg-[#07070E]/90 light:bg-white/90 backdrop-blur-xl border-b border-white/10 dark:border-white/10 light:border-slate-200/80 shadow-[0_4px_30px_rgba(0,0,0,0.3)]'
+          ? 'py-3.5 bg-[#FDF3DA]/90 dark:bg-[#070C17]/90 backdrop-blur-xl border-b border-[#045EAC]/15 dark:border-white/10 shadow-[0_4px_24px_rgba(4,94,172,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)]'
           : 'py-5 bg-transparent'
       }`}
     >
@@ -45,7 +45,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-900/40 dark:bg-slate-900/40 light:bg-slate-100/70 p-1.5 rounded-full border border-white/10 dark:border-white/10 light:border-slate-200 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 bg-white/75 dark:bg-slate-900/50 p-1.5 rounded-full border border-[#045EAC]/15 dark:border-white/10 backdrop-blur-md shadow-sm">
             {navItems.map((item) => {
               const isActive = activeId === item.id;
               return (
@@ -54,14 +54,14 @@ export function Navbar() {
                   href={item.href}
                   className={`relative px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200 ${
                     isActive
-                      ? 'text-brand-secondary dark:text-brand-secondary light:text-brand-primary'
-                      : 'text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-950'
+                      ? 'text-[#045EAC] dark:text-brand-secondary'
+                      : 'text-slate-600 dark:text-slate-400 hover:text-[#045EAC] dark:hover:text-white'
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="nav-pill"
-                      className="absolute inset-0 bg-brand-primary/20 dark:bg-brand-primary/20 light:bg-brand-primary/10 border border-brand-secondary/40 rounded-full -z-10 shadow-brand-secondary"
+                      className="absolute inset-0 bg-[#08A3FF]/15 dark:bg-brand-primary/25 border border-[#08A3FF]/40 rounded-full -z-10"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -82,7 +82,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-xl border border-slate-700/60 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 dark:text-slate-300 light:text-slate-700 focus:outline-none"
+              className="p-2 rounded-xl border border-[#045EAC]/20 dark:border-white/10 bg-white/80 dark:bg-slate-900/60 text-[#045EAC] dark:text-slate-300 focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="w-5 h-5 text-brand-secondary" /> : <Menu className="w-5 h-5" />}
@@ -99,7 +99,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden border-b border-white/10 dark:border-white/10 light:border-slate-200 bg-[#07070E]/95 dark:bg-[#07070E]/95 light:bg-white/95 backdrop-blur-2xl overflow-hidden"
+            className="lg:hidden border-b border-[#045EAC]/15 dark:border-white/10 bg-[#FDF3DA]/95 dark:bg-[#070C17]/95 backdrop-blur-2xl overflow-hidden"
           >
             <div className="px-5 pt-4 pb-6 space-y-2">
               {navItems.map((item) => (
@@ -109,8 +109,8 @@ export function Navbar() {
                   onClick={closeMenu}
                   className={`block px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide transition-colors ${
                     activeId === item.id
-                      ? 'bg-brand-primary/20 text-brand-secondary border border-brand-primary/30'
-                      : 'text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-white/5 dark:hover:bg-white/5 light:hover:bg-slate-100'
+                      ? 'bg-[#08A3FF]/15 text-[#045EAC] dark:bg-brand-primary/20 dark:text-brand-secondary border border-[#08A3FF]/30'
+                      : 'text-slate-700 dark:text-slate-300 hover:bg-[#045EAC]/5 dark:hover:bg-white/5'
                   }`}
                 >
                   {item.name}

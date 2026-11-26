@@ -4,8 +4,8 @@ export const siteConfig = {
   description: "We build AI agents and automation systems that take care of repetitive work, connect your business tools, and help your team work more efficiently.",
   foundedYear: 2024,
   email: "hello@codekrexx.com",
-  phone: "+1 (555) 329-AI24",
-  location: "San Francisco, CA & Remote Worldwide",
+  phone: "9391227572",
+  location: "Visakhapatnam, Gajuwaka",
   navLinks: [
     { name: "Services", href: "#services", id: "services" },
     { name: "How We Work", href: "#how-we-work", id: "how-we-work" },
